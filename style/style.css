@@ -1,0 +1,47 @@
+/*GENERAL*/
+
+:root {
+  --main-color: #efdeca;
+  --dark-main-color: #835343;
+  --white-color: #f5f3ef;
+  --second-color: #6a803e
+}
+
+@font-face {
+  font-family: DiplomataSC;
+  src: url("../fonts/DiplomataSC.ttf");
+}
+
+@font-face {
+  font-family: OpenSans;
+  src: url("../fonts/OpenSans.ttf")
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: DiplomataSC;
+  color: var(--dark-main-color);
+  background-color: var(--white-color);
+}
+
+main {
+  flex-grow: 1
+}
