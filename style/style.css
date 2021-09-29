@@ -45,3 +45,43 @@ body {
 main {
   flex-grow: 1
 }
+
+
+#map{
+  display: flex;  
+  height: 100vh;
+  width: 200vh;
+
+
+}
+
+#ping_northAmerica{
+  position: absolute;
+  top: 175px;
+  left: 160px;
+}
+#ping_southAmerica{
+  position: absolute;
+  top: 400px;
+  left: 360px;
+}
+#ping_oceania{
+  position: absolute;
+  top: 440px;
+  left: 1100px;
+}
+#ping_africa{
+  position: absolute;
+  top: 300px;
+  left: 650px;
+}
+#ping_europe{
+  position: absolute;
+  top: 175px;
+  left: 700px;
+}
+#ping_asia{
+  position: absolute;
+  top: 175px;
+  left: 1050px;
+}
