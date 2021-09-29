@@ -46,10 +46,25 @@ for(let i = 0; i < 3; i++) {
   hamburger.appendChild(hamburgerSpan);
 }
 
+const navbarTitleLink = document.createElement("a");
+navbarTitleLink.href = "index.html";
+navbarTitleLink.classList.add("navbar--title-link");
+navbarNav.appendChild(navbarTitleLink);
+
+const navbarTitle = document.createElement("h2");
+navbarTitle.classList.add("navbar--title");
+navbarTitle.innerHTML = "TRAVELERS";
+navbarTitleLink.appendChild(navbarTitle);
+
+const compass = document.createElement("img");
+compass.src = "./assets/compass.svg";
+compass.alt = "find the north";
+compass.classList.add("navbar--image");
+navbarNav.appendChild(compass);
+
 const navbarUl = document.createElement("ul");
 navbarUl.classList.add("navbar--ul");
 navbarNav.appendChild(navbarUl);
-
 
 for(let i = 0; i < menus.length; i++) {
   const navbarLi = document.createElement("li");
