@@ -100,3 +100,23 @@ main {
   color: var(--white-color);
   text-decoration: none
 }
+
+@media screen and (min-width:1300px) {
+  .navbar--hamburger {
+    display: none;
+  }
+  .navbar--ul {
+    flex-direction: row;
+    background-color: transparent;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .navbar--li {
+    list-style: none;
+    padding: 0 20px;
+  }
+  .navbar--link {
+    color: var(--dark-main-color);
+  }
+}
