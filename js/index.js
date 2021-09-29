@@ -87,3 +87,18 @@ for(let i = 0; i < menus.length; i++) {
 hamburger.addEventListener("click", () => {
   navbarUl.classList.toggle("navbar--ul-show");
 })
+
+//FOOTER
+
+const footer = document.querySelector(".footer");
+const titleForFooter = "Travelers - 2021";
+const textForFooter = "Jade Clairicia | Karim Boudjemai | Camille Frelat | Anthony Charretier";
+
+const footerTitle = document.createElement("h2");
+footerTitle.classList.add("footer--title");
+footerTitle.innerHTML = titleForFooter;
+footer.appendChild(footerTitle);
+const footerText = document.createElement("p");
+footerText.classList.add("footer--text");
+footerText.innerHTML = textForFooter;
+footer.appendChild(footerText);

@@ -84,7 +84,8 @@ main {
 
 .navbar--title-link {
   color: var(--dark-main-color);
-  text-decoration: none
+  text-decoration: none;
+  font-size: 14px
 }
 
 .navbar--ul {
@@ -138,5 +139,40 @@ main {
   .navbar--link {
     color: var(--dark-main-color);
     font-size: 14px
+  }
+}
+
+/*FOOTER*/
+
+.footer {
+  padding: 10px;
+  background-color: var(--main-color);
+  text-align: center;
+}
+
+.footer--title {
+  font-family: DiplomataSC;
+  font-size: 14px;
+  padding-bottom: 3px
+}
+
+.footer--text {
+  font-weight: bold;
+  font-size: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
+    padding: 15px;
+  }
+
+  .footer--title {
+    font-family: DiplomataSC;
+    font-size: 16px;
+  }
+
+  .footer--text {
+    font-weight: bold;
+    font-size: 12px;
   }
 }
