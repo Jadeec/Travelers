@@ -48,6 +48,11 @@ main {
 
 /*NAVBAR*/
 
+.navbar {
+  position: sticky;
+  top: 0;
+}
+
 .navbar--nav {
   background-color: var(--main-color);
   height: 40px;
