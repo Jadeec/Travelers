@@ -6,7 +6,7 @@ const welcomePoints = document.querySelectorAll(".welcome--load-point");
 let interval = 1000/3;
 
 const welcomePointsWave = () => {
-  firstInterval = setInterval(() => {
+  setInterval(() => {
     welcomePoints[0].classList.toggle("welcome--load-point-animate-wave");
     setTimeout(() => {
       welcomePoints[1].classList.toggle("welcome--load-point-animate-wave");
