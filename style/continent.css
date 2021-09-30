@@ -51,6 +51,9 @@ img {
     align-items: center;
     margin-bottom: 40px;
   }
+  h1{
+    padding : 40px 0;
+  }
   .bloc>* {
     width: 50%;
     padding: 0 30px;
@@ -61,4 +64,5 @@ img {
   .list {
     margin-bottom: 40px;
   }
+ 
 }
