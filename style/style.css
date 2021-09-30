@@ -27,6 +27,7 @@
 
 html {
   overflow-x: hidden;
+  position: relative;
 }
 
 html,
@@ -50,11 +51,11 @@ main {
 /*WELCOME ANIMATION*/
 
 .welcome {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: calc(100% + 55px);
+  height: 100%;
   background-color: var(--white-color);
   z-index: 5;
   display: flex;
