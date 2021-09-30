@@ -1,0 +1,50 @@
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+    max-width: 336px;
+   
+}
+
+.carouselItem {
+    display: none;
+}
+
+.carousel img {
+    width: 100%;
+    max-width: 336px;
+    height: auto; 
+    border-radius:10px;
+
+}
+
+ .carouselItemVisible {
+    display:block; 
+}
+
+.carouselAction {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+  
+    }
+
+.carouselAction button {
+    border-radius: 50px;
+    border: 0;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px;
+
+}
+
+#carouselBtnPrevious {
+    margin-left:20px;
+}
+
+#carouselBtnNext {
+    margin-right: 20px;
+}
