@@ -232,7 +232,7 @@ main {
 .pages--title {
   font-size: 35px;
   font-family: DiplomataSC;
-  margin: 20px;
+  margin: 20px auto 40px auto;
 }
 
 .sub-title {
@@ -243,6 +243,11 @@ main {
 .pages--images {
   max-height: 500px;
   max-width: 100%;
+  margin-bottom: 20px;
+}
+
+.image-opodo {
+  width: 100%;
   margin-bottom: 20px;
 }
 
@@ -260,7 +265,7 @@ main {
   text-align: justify;
 }
 
-.sub-title, h1 {
+.sub-title {
   margin-bottom: 20px;
   text-align: center;
 }
@@ -277,9 +282,6 @@ main {
     align-items: center;
     margin-bottom: 40px;
   }
-  h1{
-    padding : 40px 0;
-  }
   .bloc>* {
     width: 50%;
     padding: 0 50px;
@@ -294,7 +296,11 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 100px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .image-opodo {
+    width: 50%;
   }
 }
 

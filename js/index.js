@@ -104,7 +104,7 @@ if(document.querySelector(".welcome") && document.querySelectorAll(".welcome--lo
     setTimeout(() => {
       welcomeBox.classList.add("welcome--animate");
       clearInterval();
-    }, 1000);
+    }, 750);
   }
 
   document.addEventListener("DOMContentLoaded", () => {
