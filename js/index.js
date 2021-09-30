@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 //NAVBAR
 
 const menus = [
@@ -107,3 +108,6 @@ const footerText = document.createElement("p");
 footerText.classList.add("footer--text");
 footerText.innerHTML = textForFooter;
 footer.appendChild(footerText);
+=======
+
+>>>>>>> c797fca3fac41044e26f4b6cffc97c074d09a48a
