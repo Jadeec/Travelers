@@ -1,5 +1,5 @@
 // Create slides
-let slideposition = 0;
+let slideposition = 1;
 const slides = document.querySelectorAll('.carouselItem');
 const totalSlides = slides.length;
 

@@ -2,24 +2,32 @@
 .carousel {
     position: relative;
     overflow: hidden;
-    max-width: 336px;
-   
+    text-align: center;
 }
 
 .carouselItem {
     display: none;
+    width: 90%;
+    margin: auto;
+    height: 600px;
+    overflow: hidden;
+    border-radius:10px;
+}
+
+@media screen and (min-width: 768px) {
+  .carouselItem {
+    width: 50%;
+  }
 }
 
 .carousel img {
     width: 100%;
-    max-width: 336px;
-    height: auto; 
-    border-radius:10px;
-
 }
 
  .carouselItemVisible {
-    display:block; 
+   display: flex;
+   align-items: center;
+   justify-content: center;
 }
 
 .carouselAction {
@@ -29,7 +37,7 @@
     width: 100%;
     top: 50%;
     transform: translateY(-50%);
-  
+
     }
 
 .carouselAction button {
