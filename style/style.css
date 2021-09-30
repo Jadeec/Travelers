@@ -180,14 +180,16 @@ main {
   padding-bottom: 3px
 }
 
-.footer--text {
+.footer--link {
   font-weight: bold;
   font-size: 10px;
+  text-decoration: none;
+  color: var(--dark-main);
 }
 
 @media screen and (min-width: 768px) {
   .footer {
-    padding: 5px;
+    padding: 5px 0;
   }
 
   .footer--title {
@@ -195,7 +197,7 @@ main {
     font-size: 16px;
   }
 
-  .footer--text {
+  .footer--link {
     font-weight: bold;
     font-size: 12px;
   }

@@ -95,6 +95,25 @@ hamburger.addEventListener("click", () => {
 
 //FOOTER
 
+const team = [
+  {
+    name: "Jade Clairicia",
+    github: "https://github.com/Jadeec"
+  },
+  {
+    name: "Karim Boudjemai",
+    github: "https://github.com/Kariim42"
+  },
+  {
+    name: "Camille Frelat",
+    github: "https://github.com/camfrelat"
+  },
+  {
+    name: "Anthony Charretier",
+    github: "https://github.com/innermost47"
+  },
+];
+
 const footer = document.querySelector(".footer");
 const titleForFooter = "Travelers - 2021";
 const textForFooter = "Jade Clairicia | Karim Boudjemai | Camille Frelat | Anthony Charretier";
@@ -103,7 +122,16 @@ const footerTitle = document.createElement("h2");
 footerTitle.classList.add("footer--title");
 footerTitle.innerHTML = titleForFooter;
 footer.appendChild(footerTitle);
-const footerText = document.createElement("p");
-footerText.classList.add("footer--text");
-footerText.innerHTML = textForFooter;
-footer.appendChild(footerText);
+
+for (let i = 0; i < team.length; i++) {
+  const teamMember = document.createElement("a");
+  teamMember.href = team[i].github;
+  teamMember.target = "_blank";
+  teamMember.classList.add("footer--link");
+  if(i === team.length - 1) {
+    teamMember.innerHTML = team[i].name;
+  } else {
+    teamMember.innerHTML = team[i].name + " |";
+  }
+  footer.appendChild(teamMember);
+}
