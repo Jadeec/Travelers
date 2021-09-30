@@ -1,58 +1,57 @@
-
 .carousel {
+    overflow: hidden;
+    max-width: 600px;
     position: relative;
-    overflow: hidden;
-    text-align: center;
-}
-
-.carouselItem {
-    display: none;
-    width: 90%;
-    margin: auto;
-    height: 600px;
-    overflow: hidden;
-    border-radius:10px;
-}
-
-@media screen and (min-width: 768px) {
-  .carouselItem {
-    width: 50%;
   }
-}
 
-.carousel img {
+  .carousel .carouselItem,
+  .carousel .carouselItem--hidden {
+    display: none;
+  }
+
+  .carousel .carouselItem img {
     width: 100%;
-}
+    max-width: 600px;
+    height: auto;
+  }
 
- .carouselItemVisible {
-   display: flex;
-   align-items: center;
-   justify-content: center;
-}
+  .carousel .carouselItemVisible {
+    display: block;
+    animation: fadeVisibility 0.5s;
+  }
 
-.carouselAction {
+  .carousel .carouselActions {
     display: flex;
+    width: 100%;
     justify-content: space-between;
     position: absolute;
-    width: 100%;
     top: 50%;
     transform: translateY(-50%);
+  }
 
-    }
-
-.carouselAction button {
+  .carousel .carouselActions button {
     border-radius: 50px;
     border: 0;
     font-weight: bold;
     cursor: pointer;
-    padding: 10px;
+    width: 40px;
+    height: 40px;
+  }
 
-}
+  .carousel .carouselActions button#carouselBtnPrevious {
+    margin-left: 20px;
+  }
 
-#carouselBtnPrevious {
-    margin-left:20px;
-}
-
-#carouselBtnNext {
+  .carousel .carouselActions button#carouselBtnNext {
     margin-right: 20px;
-}
+  }
+
+  @keyframes fadeVisibility {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+      transform: opacity linear;
+    }
+  }
