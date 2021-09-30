@@ -1,8 +1,9 @@
 // Create slides 
-let slideposition = 0; 
+let slideposition = 1; 
 const slides = document.querySelectorAll('.carouselItem');
 const totalSlides = slides.length;
-
+const rightButton = document.getElementById('carouselBtnPrevious'); 
+const leftButton = document.getElementById('carouselBtnNext'); 
 
 //animate buttons 
 document.getElementById('carouselBtnNext')
@@ -19,28 +20,31 @@ document.getElementById('carouselBtnPrevious')
 function updateSlidePosition() {
     for (let slide of slides) {
         slide.classList.remove('carouselItemVisible');
-        slide.classList.add("carouselItemHidden");
-
         slides[slideposition].classList.add('carouselItemVisible');
     }
 }
 
+
+
 //move slides 
 function moveToNextSlide() {
 if (slideposition === totalSlides -1) {
-    slideposition = 0; 
+   leftButton.style.visibility= "hidden"; 
 } else {
     slideposition++; 
 }
-    updateSlidePosition(); 
+rightButton.style.visibility = "visible";   
+updateSlidePosition(); 
+
 }
 
 function moveToPreviousSlide() {
-    if (slideposition === 0 ) {
-        slideposition = totalSlides -1; 
-    } else {
-        slideposition--; 
-    }
-    
+    if (slideposition === 0) {
+    rightButton.style.visibility= "hidden"; 
+} else {
+    slideposition--; 
+}
+
+    leftButton.style.visibility= "visible";      
     updateSlidePosition(); 
 } 
