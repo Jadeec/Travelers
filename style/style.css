@@ -79,7 +79,23 @@ main {
   display: block;
   height: 2px;
   background-color: var(--dark-main-color);
-  width: 90%
+  width: 90%;
+  transition: all 0.5s ease-in-out;
+  opacity: 1;
+}
+
+.hamburger--top-span-rotate {
+  transform: rotate(45deg);
+  transform-origin: left;
+}
+
+.hamburger--middle-span-hide {
+  opacity: 0;
+}
+
+.hamburger--bottom-span-rotate {
+  transform: rotate(-45deg);
+  transform-origin: left;
 }
 
 .navbar--image {

@@ -84,8 +84,13 @@ for(let i = 0; i < menus.length; i++) {
   })
 }
 
+const hamburgerSpan = document.querySelectorAll(".navbar--hamburger-span");
+
 hamburger.addEventListener("click", () => {
   navbarUl.classList.toggle("navbar--ul-show");
+  hamburgerSpan[0].classList.toggle("hamburger--top-span-rotate");
+  hamburgerSpan[1].classList.toggle("hamburger--middle-span-hide");
+  hamburgerSpan[2].classList.toggle("hamburger--bottom-span-rotate");
 })
 
 //FOOTER
