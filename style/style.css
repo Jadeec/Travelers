@@ -213,15 +213,20 @@ main {
   height: 100vh;
   width: 100vw;
   margin-bottom: 0px;
-  /* position: fixed; */
   overflow-x: scroll;
   overflow-y: hidden;
 }
 
-#mapWorld{
+.mapWorld{
   height: 100%;
   width: auto;
   position: relative;
+}
+
+@media screen and (min-width: 900px) {
+  .mapWorld{
+    width: 100%;
+  }
 }
 
 /*FOOTER*/
@@ -264,10 +269,4 @@ main {
     font-size: 12px;
   }
 
-}
-
-@media screen and (min-width: 900px) {
-  #mapWorld{
-    width: 100%;
-  }
 }
