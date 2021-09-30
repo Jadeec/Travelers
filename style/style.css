@@ -47,16 +47,16 @@ main {
 }
 
 
-
 .container_map{
 height: 100vh;
+width: 200vw;
+margin-bottom: 0px;
+position: fixed;
+overflow-x: scroll;
 
 }
 
 #map{
-  height: 100%;
-  width: 200vh;
-  display: flex;  
-  height: 100vh; 
-  width: 200vw;
+ width: 200vh;
+ height: 100%;
 }
