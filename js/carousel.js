@@ -20,30 +20,28 @@ document.getElementById('carouselBtnPrevious')
 function updateSlidePosition() {
     for (let slide of slides) {
         slide.classList.remove('carouselItemVisible');
-        slides[slideposition].classList.add('carouselItemVisible');
     }
+    slides[slideposition].classList.add('carouselItemVisible');
 }
 
 
 
 //move slides 
 function moveToNextSlide() {
+    slideposition++; 
 if (slideposition === totalSlides -1) {
    leftButton.style.visibility= "hidden"; 
-} else {
-    slideposition++; 
-}
+} 
 rightButton.style.visibility = "visible";   
 updateSlidePosition(); 
 
 }
 
 function moveToPreviousSlide() {
+    slideposition--; 
     if (slideposition === 0) {
     rightButton.style.visibility= "hidden"; 
-} else {
-    slideposition--; 
-}
+} 
 
     leftButton.style.visibility= "visible";      
     updateSlidePosition(); 
