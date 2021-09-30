@@ -53,6 +53,7 @@ for(let i = 0; i < 3; i++) {
 const navbarTitleLink = document.createElement("a");
 navbarTitleLink.href = "index.html";
 navbarTitleLink.classList.add("navbar--title-link");
+navbarTitleLink.classList.add("transition--link");
 navbarNav.appendChild(navbarTitleLink);
 
 const navbarTitle = document.createElement("h2");
@@ -76,6 +77,7 @@ for(let i = 0; i < menus.length; i++) {
   navbarUl.appendChild(navbarLi);
   const navbarLink = document.createElement("a");
   navbarLink.classList.add("navbar--link");
+  navbarLink.classList.add("transition--link");
   navbarLink.href = menus[i].link;
   navbarLink.innerHTML = menus[i].menu
   navbarLi.appendChild(navbarLink);
@@ -92,6 +94,34 @@ hamburger.addEventListener("click", () => {
   hamburgerSpan[1].classList.toggle("hamburger--middle-span-hide");
   hamburgerSpan[2].classList.toggle("hamburger--bottom-span-rotate");
 })
+
+//WELCOME ANIMATION
+
+if(document.querySelector(".welcome") && document.querySelectorAll(".welcome--load-point")) {
+  const welcomeBox = document.querySelector(".welcome");
+
+  const welcomeAnimation = () => {
+    setTimeout(() => {
+      welcomeBox.classList.add("welcome--animate");
+      clearInterval();
+    }, 1000);
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    welcomeAnimation();
+  });
+
+  const transitionLinks = document.querySelectorAll(".transition--link");
+  for(let i = 0; i < transitionLinks.length; i++) {
+    transitionLinks[i].addEventListener("click", (e) => {
+      e.preventDefault();
+      welcomeBox.classList.remove("welcome--animate");
+      setTimeout(() => {
+        window.location = transitionLinks[i].href;
+      }, 1000);
+    })
+  }
+}
 
 //FOOTER
 
@@ -136,6 +166,8 @@ for (let i = 0; i < team.length; i++) {
   footer.appendChild(teamMember);
 }
 const images = document.querySelectorAll('.pages--images');
+
+//INTERSECTION OBSERVER FOR LAZY LOADING
 
 let imgObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach((entry) => {
