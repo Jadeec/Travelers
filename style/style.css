@@ -226,6 +226,137 @@ main {
   }
 }
 
+/*PAGES*/
+
+.pages--title {
+  font-size: 35px;
+  font-family: DiplomataSC;
+  margin: 40px;
+}
+
+.sub-title {
+  font-size: 20px;
+  font-family: DiplomataSC;
+}
+
+.pages--images {
+  max-height: 500px;
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+.container {
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.bloc p {
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.sub-title, h1 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 700px) {
+  .bloc {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+  h1{
+    padding : 40px 0;
+  }
+  .bloc>* {
+    width: 50%;
+    padding: 0 50px;
+  }
+  .bloc-reverse{
+    flex-direction: row-reverse;
+  }
+  .list {
+    margin-bottom: 40px;
+  }
+  .bloc--opodo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 100px;
+  }
+}
+
+/*CAROUSEL*/
+
+.carousel {
+  overflow: hidden;
+  max-width: 600px;
+  position: relative;
+}
+
+.carousel .carouselItem,
+.carousel .carouselItem--hidden {
+  display: none;
+}
+
+.carousel .carouselItem img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+}
+
+.carousel .carouselItemVisible {
+  display: block;
+  animation: fadeVisibility 0.5s;
+}
+
+.carousel .carouselActions {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.carousel .carouselActions button {
+  border-radius: 50px;
+  border: 0;
+  font-weight: bold;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+}
+
+.carousel .carouselActions button#carouselBtnPrevious {
+  margin-left: 20px;
+}
+
+.carousel .carouselActions button#carouselBtnNext {
+  margin-right: 20px;
+}
+
+@keyframes fadeVisibility {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: opacity linear;
+  }
+}
+
 /*FOOTER*/
 
 .footer {
@@ -233,7 +364,6 @@ main {
   background-color: var(--main-color);
   text-align: center;
   z-index: 3;
-  position: fixed;
   bottom: 0;
   width: 100%;
 }
@@ -265,5 +395,4 @@ main {
     font-weight: bold;
     font-size: 12px;
   }
-
 }
