@@ -44,7 +44,24 @@ body {
 }
 
 main {
-  flex-grow: 1
+  flex-grow: 1;
+}
+
+/* map */
+
+.betweenTopAndBot{
+  height: 100vh;
+  width: 100vw;
+  margin-bottom: 0px;
+  position: fixed;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+#mapWorld{
+  height: 100%;
+  width: auto;
+  position: relative;
 }
 
 /*WELCOME ANIMATION*/
@@ -89,6 +106,7 @@ main {
 .navbar {
   position: sticky;
   top: 0;
+  z-index: 2;
 }
 
 .navbar--nav {
@@ -210,6 +228,7 @@ main {
   padding: 5px;
   background-color: var(--main-color);
   text-align: center;
+  z-index: 3;
 }
 
 .footer--title {
@@ -238,5 +257,12 @@ main {
   .footer--link {
     font-weight: bold;
     font-size: 12px;
+  }
+
+}
+
+@media screen and (min-width: 900px) {
+  #mapWorld{
+    width: 100%;
   }
 }
