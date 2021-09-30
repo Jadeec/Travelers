@@ -47,23 +47,6 @@ main {
   flex-grow: 1;
 }
 
-/* map */
-
-.betweenTopAndBot{
-  height: 100vh;
-  width: 100vw;
-  margin-bottom: 0px;
-  position: fixed;
-  overflow-x: scroll;
-  overflow-y: hidden;
-}
-
-#mapWorld{
-  height: 100%;
-  width: auto;
-  position: relative;
-}
-
 /*WELCOME ANIMATION*/
 
 .welcome {
@@ -71,7 +54,7 @@ main {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: calc(100% + 55px);
   background-color: var(--white-color);
   z-index: 5;
   display: flex;
@@ -79,6 +62,7 @@ main {
   justify-content: center;
   align-items: center;
   transition: left 1s ease-in-out;
+  overflow-x: hidden;
 }
 
 .welcome--load-point {
@@ -167,6 +151,8 @@ main {
 
 .navbar--ul {
   background-color: var(--dark-main-color);
+  border-radius: 0 0 30px 0;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -174,7 +160,6 @@ main {
   position: absolute;
   top: 50px;
   width: 100%;
-  height: 100vh;
   left: -100%;
   transition: left 0.5s ease-in-out
 }
@@ -184,7 +169,7 @@ main {
 }
 
 .navbar--li {
-  padding-bottom: 50px;
+  padding-bottom: 20px;
   list-style: none;
 }
 
@@ -222,6 +207,23 @@ main {
   }
 }
 
+/*MAP*/
+
+.betweenTopAndBot{
+  height: 100vh;
+  width: 100vw;
+  margin-bottom: 0px;
+  /* position: fixed; */
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+#mapWorld{
+  height: 100%;
+  width: auto;
+  position: relative;
+}
+
 /*FOOTER*/
 
 .footer {
@@ -229,6 +231,9 @@ main {
   background-color: var(--main-color);
   text-align: center;
   z-index: 3;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
 .footer--title {
