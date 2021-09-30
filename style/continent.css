@@ -56,7 +56,7 @@ img {
   }
   .bloc>* {
     width: 50%;
-    padding: 0 30px;
+    padding: 0 50px;
   }
   .bloc-reverse{
     flex-direction: row-reverse;
