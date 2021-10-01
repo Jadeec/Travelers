@@ -412,7 +412,7 @@ main {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 90%;
-  height: 50%;
+  height: auto;
   background-color: var(--white-color);
   z-index: 6;
   border-radius: 30px;
@@ -423,7 +423,7 @@ main {
 
 .showPopup {
   top: 50%;
-  opacity: 1;
+  opacity: .8;
 }
 
 .cross {
@@ -432,4 +432,57 @@ main {
   top: 13px;
   font-size: 30px;
   cursor: pointer;
+}
+
+.teamName {
+  font-family: DiplomataSC;
+  text-align: center;
+}
+
+.teamImgGitHubLink {
+  width: 30px;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+
+.teamImgLinkedinLink {
+  width: 30px;
+  position: absolute;
+  right: 70px;
+  bottom: 20px;
+}
+
+.flexContainerPopup {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: justify;
+}
+
+.containerProfilImg {
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.teamProfileImage {
+  width: 100%;
+}
+
+.teamDescription {
+  padding-left: 10px
+}
+
+@media screen and (min-width: 768px) {
+  .newPopup {
+    width: 50%;
+  }
+  .containerProfilImg {
+    width: 250px;
+  }
 }
