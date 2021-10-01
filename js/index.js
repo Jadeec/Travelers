@@ -37,90 +37,88 @@ const menuTitle = "TRAVELERS";
 
 const navbar = document.querySelector(".navbar");
 const navbarNav = document.createElement("nav");
-navbarNav.classList.add("navbar--nav");
+navbarNav.classList.add("navbarNav");
 navbar.appendChild(navbarNav);
 
 const hamburger = document.createElement("div");
-hamburger.classList.add("navbar--hamburger");
+hamburger.classList.add("navbarHamburger");
 navbarNav.appendChild(hamburger);
 
 for(let i = 0; i < 3; i++) {
   const hamburgerSpan = document.createElement("span");
-  hamburgerSpan.classList.add("navbar--hamburger-span");
+  hamburgerSpan.classList.add("navbarHamburgerSpan");
   hamburger.appendChild(hamburgerSpan);
 }
 
 const navbarTitleLink = document.createElement("a");
 navbarTitleLink.href = "index.html";
-navbarTitleLink.classList.add("navbar--title-link");
-navbarTitleLink.classList.add("transition--link");
+navbarTitleLink.classList.add("navbarTitleLink");
+navbarTitleLink.classList.add("transitionLink");
 navbarNav.appendChild(navbarTitleLink);
 
 const navbarTitle = document.createElement("h2");
-navbarTitle.classList.add("navbar--title");
+navbarTitle.classList.add("navbarTitle");
 navbarTitle.innerHTML = menuTitle;
 navbarTitleLink.appendChild(navbarTitle);
 
 const image = document.createElement("img");
 image.src = imageMenuSrc;
 image.alt = imageMenuAlt;
-image.classList.add("navbar--image");
+image.classList.add("navbarImage");
 navbarNav.appendChild(image);
 
 const navbarUl = document.createElement("ul");
-navbarUl.classList.add("navbar--ul");
+navbarUl.classList.add("navbarUl");
 navbarNav.appendChild(navbarUl);
 
 for(let i = 0; i < menus.length; i++) {
   const navbarLi = document.createElement("li");
-  navbarLi.classList.add("navbar--li");
+  navbarLi.classList.add("navbarLi");
   navbarUl.appendChild(navbarLi);
   const navbarLink = document.createElement("a");
-  navbarLink.classList.add("navbar--link");
-  navbarLink.classList.add("transition--link");
+  navbarLink.classList.add("navbarLink");
+  navbarLink.classList.add("transitionLink");
   navbarLink.href = menus[i].link;
   navbarLink.innerHTML = menus[i].menu
   navbarLi.appendChild(navbarLink);
   navbarLink.addEventListener("click", () => {
-      navbarUl.classList.remove("navbar--ul-show");
+      navbarUl.classList.remove("navbarUlShow");
   })
 }
 
-const hamburgerSpan = document.querySelectorAll(".navbar--hamburger-span");
+const hamburgerSpan = document.querySelectorAll(".navbarHamburgerSpan");
 
 hamburger.addEventListener("click", () => {
   navbarUl.classList.toggle("navbar--ul-show");
-  hamburgerSpan[0].classList.toggle("hamburger--top-span-rotate");
-  hamburgerSpan[1].classList.toggle("hamburger--middle-span-hide");
-  hamburgerSpan[2].classList.toggle("hamburger--bottom-span-rotate");
+  hamburgerSpan[0].classList.toggle("hamburgerTopSpanRotate");
+  hamburgerSpan[1].classList.toggle("hamburgerMiddleSpanHide");
+  hamburgerSpan[2].classList.toggle("hamburgerBottomSpanRotate");
 })
 
 //WELCOME ANIMATION
 
-if(document.querySelector(".welcome") && document.querySelectorAll(".welcome--load-point")) {
-  const welcomeBox = document.querySelector(".welcome");
+const welcomeBox = document.querySelector(".welcome");
 
-  const welcomeAnimation = () => {
+const welcomeAnimation = () => {
+  setTimeout(() => {
+    welcomeBox.classList.add("welcomeAnimate");
+    clearInterval();
+  }, 750);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  welcomeAnimation();
+});
+
+const transitionLinks = document.querySelectorAll(".transitionLink");
+for(let i = 0; i < transitionLinks.length; i++) {
+  transitionLinks[i].addEventListener("click", (e) => {
+    e.preventDefault();
+    welcomeBox.classList.remove("welcomeAnimate");
     setTimeout(() => {
-      welcomeBox.classList.add("welcome--animate");
-      clearInterval();
-    }, 750);
-  }
-
-  document.addEventListener("DOMContentLoaded", () => {
-    welcomeAnimation();
-  });
-
-  const transitionLinks = document.querySelectorAll(".transition--link");
-  for(let i = 0; i < transitionLinks.length; i++) {
-    transitionLinks[i].addEventListener("click", (e) => {
-      e.preventDefault();
-      welcomeBox.classList.remove("welcome--animate");
-      setTimeout(() => {
-        window.location = transitionLinks[i].href;
-      }, 1000);
-    })
-  }
+      window.location = transitionLinks[i].href;
+    }, 1000);
+  })
 }
 
 //FOOTER
@@ -149,7 +147,7 @@ const titleForFooter = "Travelers - 2021";
 const textForFooter = "Jade Clairicia | Karim Boudjemai | Camille Frelat | Anthony Charretier";
 
 const footerTitle = document.createElement("h2");
-footerTitle.classList.add("footer--title");
+footerTitle.classList.add("footerTitle");
 footerTitle.innerHTML = titleForFooter;
 footer.appendChild(footerTitle);
 
@@ -157,7 +155,7 @@ for (let i = 0; i < team.length; i++) {
   const teamMember = document.createElement("a");
   teamMember.href = team[i].github;
   teamMember.target = "_blank";
-  teamMember.classList.add("footer--link");
+  teamMember.classList.add("footerLink");
   if(i === team.length - 1) {
     teamMember.innerHTML = team[i].name;
   } else {
@@ -165,7 +163,7 @@ for (let i = 0; i < team.length; i++) {
   }
   footer.appendChild(teamMember);
 }
-const images = document.querySelectorAll('.pages--images');
+const images = document.querySelectorAll('.pagesImages');
 
 //INTERSECTION OBSERVER FOR LAZY LOADING
 
