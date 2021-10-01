@@ -66,22 +66,6 @@ main {
   overflow-x: hidden;
 }
 
-.welcome--load-point {
-  height: 10px;
-  width: 10px;
-  background-color: var(--dark-main-color);
-  border-radius: 50%;
-  display: inline-block;
-  position: relative;
-  margin: 5px;
-  top:0;
-  transition: top .5s ease-in-out;
-}
-
-.welcome--load-point-animate-wave {
-  top: -15px
-}
-
 .welcome--animate {
   left: -100%;
 }
