@@ -1,11 +1,11 @@
-// Create slides 
-let slideposition = 1; 
+// Create slides
+let slideposition = 1;
 const slides = document.querySelectorAll('.carouselItem');
 const totalSlides = slides.length;
-const rightButton = document.getElementById('carouselBtnPrevious'); 
-const leftButton = document.getElementById('carouselBtnNext'); 
+const rightButton = document.getElementById('carouselBtnPrevious');
+const leftButton = document.getElementById('carouselBtnNext');
 
-//animate buttons 
+//animate buttons
 document.getElementById('carouselBtnNext')
 .addEventListener("click", function() {
     moveToNextSlide();
@@ -16,7 +16,7 @@ document.getElementById('carouselBtnPrevious')
     moveToPreviousSlide();
 })
 
-//Get silde position 
+//Get silde position
 function updateSlidePosition() {
     for (let slide of slides) {
         slide.classList.remove('carouselItemVisible');
@@ -24,25 +24,23 @@ function updateSlidePosition() {
     slides[slideposition].classList.add('carouselItemVisible');
 }
 
-
-
-//move slides 
+//move slides
 function moveToNextSlide() {
-    slideposition++; 
+    slideposition++;
 if (slideposition === totalSlides -1) {
-   leftButton.style.visibility= "hidden"; 
-} 
-rightButton.style.visibility = "visible";   
-updateSlidePosition(); 
+   leftButton.style.visibility= "hidden";
+}
+rightButton.style.visibility = "visible";
+updateSlidePosition();
 
 }
 
 function moveToPreviousSlide() {
-    slideposition--; 
+    slideposition--;
     if (slideposition === 0) {
-    rightButton.style.visibility= "hidden"; 
-} 
+    rightButton.style.visibility= "hidden";
+}
 
-    leftButton.style.visibility= "visible";      
-    updateSlidePosition(); 
-} 
+    leftButton.style.visibility= "visible";
+    updateSlidePosition();
+}
