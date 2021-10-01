@@ -208,22 +208,20 @@ main {
 /*MAP*/
 
 .betweenTopAndBot{
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
-  margin-bottom: 0px;
   overflow-x: scroll;
   overflow-y: hidden;
 }
 
 .mapWorld{
-  height: 100%;
-  width: auto;
   position: relative;
+  margin-bottom: -10px;
 }
 
 @media screen and (min-width: 900px) {
-  .mapWorld{
-    width: 100%;
+  .betweenTopAndBot{
+      overflow-x: hidden;
   }
 }
 
