@@ -150,6 +150,9 @@ footerTitle.classList.add("footerTitle");
 footerTitle.innerHTML = titleForFooter;
 footer.appendChild(footerTitle);
 
+const teamName = document.createElement("h2");
+teamName.classList.add("teamName");
+
 for (let i = 0; i < team.length; i++) {
   const teamMember = document.createElement("p");
   teamMember.classList.add("footerLink");
@@ -159,12 +162,15 @@ for (let i = 0; i < team.length; i++) {
     teamMember.innerHTML = team[i].name + " |";
   }
   footer.appendChild(teamMember);
+
   teamMember.addEventListener("click", () => {
     darkBackground.classList.toggle("showDarkBackground");
     newPopup.classList.toggle("showPopup");
+    teamName.innerHTML = "";
+    teamName.innerHTML = team[i].name;
+    newPopup.appendChild(teamName);
   })
 }
-const images = document.querySelectorAll('.pagesImages');
 
 //POPUP
 
@@ -177,7 +183,7 @@ newPopup.classList.add("newPopup");
 document.body.appendChild(newPopup);
 const cross = document.createElement("div");
 cross.classList.add("cross");
-cross.innerHTML = "x";
+cross.innerHTML = "&#10005;";
 newPopup.appendChild(cross);
 
 cross.addEventListener("click", () => {
@@ -187,6 +193,8 @@ cross.addEventListener("click", () => {
 
 
 //INTERSECTION OBSERVER FOR LAZY LOADING
+
+const images = document.querySelectorAll('.pagesImages');
 
 let imgObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach((entry) => {
