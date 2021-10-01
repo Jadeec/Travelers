@@ -89,7 +89,7 @@ for(let i = 0; i < menus.length; i++) {
 const hamburgerSpan = document.querySelectorAll(".navbarHamburgerSpan");
 
 hamburger.addEventListener("click", () => {
-  navbarUl.classList.toggle("navbar--ul-show");
+  navbarUl.classList.toggle("navbarUlShow");
   hamburgerSpan[0].classList.toggle("hamburgerTopSpanRotate");
   hamburgerSpan[1].classList.toggle("hamburgerMiddleSpanHide");
   hamburgerSpan[2].classList.toggle("hamburgerBottomSpanRotate");
