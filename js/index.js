@@ -144,7 +144,6 @@ const team = [
 
 const footer = document.querySelector(".footer");
 const titleForFooter = "Travelers - 2021";
-const textForFooter = "Jade Clairicia | Karim Boudjemai | Camille Frelat | Anthony Charretier";
 
 const footerTitle = document.createElement("h2");
 footerTitle.classList.add("footerTitle");
@@ -152,9 +151,7 @@ footerTitle.innerHTML = titleForFooter;
 footer.appendChild(footerTitle);
 
 for (let i = 0; i < team.length; i++) {
-  const teamMember = document.createElement("a");
-  teamMember.href = team[i].github;
-  teamMember.target = "_blank";
+  const teamMember = document.createElement("p");
   teamMember.classList.add("footerLink");
   if(i === team.length - 1) {
     teamMember.innerHTML = team[i].name;
@@ -162,8 +159,32 @@ for (let i = 0; i < team.length; i++) {
     teamMember.innerHTML = team[i].name + " |";
   }
   footer.appendChild(teamMember);
+  teamMember.addEventListener("click", () => {
+    darkBackground.classList.toggle("showDarkBackground");
+    newPopup.classList.toggle("showPopup");
+  })
 }
 const images = document.querySelectorAll('.pagesImages');
+
+//POPUP
+
+const darkBackground = document.createElement("div");
+darkBackground.classList.add("darkBackground");
+document.body.appendChild(darkBackground);
+
+const newPopup = document.createElement("div");
+newPopup.classList.add("newPopup");
+document.body.appendChild(newPopup);
+const cross = document.createElement("div");
+cross.classList.add("cross");
+cross.innerHTML = "x";
+newPopup.appendChild(cross);
+
+cross.addEventListener("click", () => {
+  darkBackground.classList.toggle("showDarkBackground");
+  newPopup.classList.toggle("showPopup");
+})
+
 
 //INTERSECTION OBSERVER FOR LAZY LOADING
 

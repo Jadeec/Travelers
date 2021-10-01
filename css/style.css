@@ -368,6 +368,8 @@ main {
   font-size: 10px;
   text-decoration: none;
   color: var(--dark-main);
+  display: inline-block;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 768px) {
@@ -384,4 +386,47 @@ main {
     font-weight: bold;
     font-size: 12px;
   }
+}
+
+/*POPUP*/
+
+.darkBackground {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: black;
+  opacity: 0.8;
+  z-index: 5;
+}
+
+.showDarkBackground {
+  display: block;
+}
+
+.newPopup {
+  position: fixed;
+  top: 50%;
+  left: -50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: 50%;
+  background-color: var(--white-color);
+  z-index: 6;
+  border-radius: 30px;
+  transition: left .5s ease-in-out
+}
+
+.showPopup {
+  left: 50%;
+}
+
+.cross {
+  position: absolute;
+  right: 20px;
+  top: 0;
+  font-size: 40px;
+  cursor: pointer;
 }
