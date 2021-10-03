@@ -166,7 +166,7 @@ const team = [
     name: "Jade Clairicia",
     github: "https://github.com/Jadeec",
     linkedin: "https://www.linkedin.com/in/jade-clairicia1/",
-    picture: "jade.jpeg",
+    picture: "./assets/jade.jpeg",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi imperdiet cras orci, urna, tincidunt.",
   },
   {
