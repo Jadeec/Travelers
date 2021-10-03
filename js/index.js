@@ -166,14 +166,14 @@ const team = [
     name: "Jade Clairicia",
     github: "https://github.com/Jadeec",
     linkedin: "https://www.linkedin.com/in/jade-clairicia1/",
-    picture: "",
+    picture: "jade.jpeg",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi imperdiet cras orci, urna, tincidunt.",
   },
   {
     name: "Karim Boudjemai",
     github: "https://github.com/Kariim42",
     linkedin: "https://www.linkedin.com/in/karim-boudjemai-87490b221/",
-    picture: "",
+    picture: "./assets/karim.jpeg",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi imperdiet cras orci, urna, tincidunt.",
   },
   {
