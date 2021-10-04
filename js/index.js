@@ -3,31 +3,31 @@
 const menus = [
   {
     menu: "home",
-    link: "index.html"
+    link: "index.html",
   },
   {
     menu: "asia",
-    link: "asia.html"
+    link: "asia.html",
   },
   {
     menu: "africa",
-    link: "africa.html"
+    link: "africa.html",
   },
   {
     menu: "north america",
-    link: "northAmerica.html"
+    link: "northAmerica.html",
   },
   {
     menu: "south america",
-    link: "southAmerica.html"
+    link: "southAmerica.html",
   },
   {
     menu: "europe",
-    link: "europe.html"
+    link: "europe.html",
   },
   {
     menu: "oceania",
-    link: "oceania.html"
+    link: "oceania.html",
   },
 ];
 
@@ -44,7 +44,7 @@ const hamburger = document.createElement("div");
 hamburger.classList.add("navbarHamburger");
 navbarNav.appendChild(hamburger);
 
-for(let i = 0; i < 3; i++) {
+for (let i = 0; i < 3; i++) {
   const hamburgerSpan = document.createElement("span");
   hamburgerSpan.classList.add("navbarHamburgerSpan");
   hamburger.appendChild(hamburgerSpan);
@@ -71,7 +71,7 @@ const navbarUl = document.createElement("ul");
 navbarUl.classList.add("navbarUl");
 navbarNav.appendChild(navbarUl);
 
-for(let i = 0; i < menus.length; i++) {
+for (let i = 0; i < menus.length; i++) {
   const navbarLi = document.createElement("li");
   navbarLi.classList.add("navbarLi");
   navbarUl.appendChild(navbarLi);
@@ -79,11 +79,11 @@ for(let i = 0; i < menus.length; i++) {
   navbarLink.classList.add("navbarLink");
   navbarLink.classList.add("transitionLink");
   navbarLink.href = menus[i].link;
-  navbarLink.innerHTML = menus[i].menu
+  navbarLink.innerHTML = menus[i].menu;
   navbarLi.appendChild(navbarLink);
   navbarLink.addEventListener("click", () => {
-      navbarUl.classList.remove("navbarUlShow");
-  })
+    navbarUl.classList.remove("navbarUlShow");
+  });
 }
 
 const hamburgerSpan = document.querySelectorAll(".navbarHamburgerSpan");
@@ -93,7 +93,7 @@ hamburger.addEventListener("click", () => {
   hamburgerSpan[0].classList.toggle("hamburgerTopSpanRotate");
   hamburgerSpan[1].classList.toggle("hamburgerMiddleSpanHide");
   hamburgerSpan[2].classList.toggle("hamburgerBottomSpanRotate");
-})
+});
 
 //WELCOME ANIMATION
 
@@ -104,21 +104,21 @@ const welcomeAnimation = () => {
     welcomeBox.classList.add("welcomeAnimate");
     clearInterval();
   }, 750);
-}
+};
 
 document.addEventListener("DOMContentLoaded", () => {
   welcomeAnimation();
 });
 
 const transitionLinks = document.querySelectorAll(".transitionLink");
-for(let i = 0; i < transitionLinks.length; i++) {
+for (let i = 0; i < transitionLinks.length; i++) {
   transitionLinks[i].addEventListener("click", (e) => {
     e.preventDefault();
     welcomeBox.classList.remove("welcomeAnimate");
     setTimeout(() => {
       window.location = transitionLinks[i].href;
     }, 1000);
-  })
+  });
 }
 
 //FOOTER & POPUP
@@ -167,28 +167,32 @@ const team = [
     github: "https://github.com/Jadeec",
     linkedin: "https://www.linkedin.com/in/jade-clairicia1/",
     picture: "./assets/jade.jpeg",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi imperdiet cras orci, urna, tincidunt.",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi imperdiet cras orci, urna, tincidunt.",
   },
   {
     name: "Karim Boudjemai",
     github: "https://github.com/Kariim42",
     linkedin: "https://www.linkedin.com/in/karim-boudjemai-87490b221/",
     picture: "./assets/karim.jpeg",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi imperdiet cras orci, urna, tincidunt.",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi imperdiet cras orci, urna, tincidunt.",
   },
   {
     name: "Camille Frelat",
     github: "https://github.com/camfrelat",
     linkedin: "https://www.linkedin.com/in/camille-frelat-27974189/",
     picture: "./assets/camille.JPG",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi imperdiet cras orci, urna, tincidunt.",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi imperdiet cras orci, urna, tincidunt.",
   },
   {
     name: "Anthony Charretier",
     github: "https://github.com/innermost47",
     linkedin: "https://www.linkedin.com/in/anthony-charretier-95101878/",
     picture: "./assets/anthony.jpeg",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi imperdiet cras orci, urna, tincidunt.",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi imperdiet cras orci, urna, tincidunt.",
   },
 ];
 
@@ -200,11 +204,10 @@ footerTitle.classList.add("footerTitle");
 footerTitle.innerHTML = titleForFooter;
 footer.appendChild(footerTitle);
 
-
 for (let i = 0; i < team.length; i++) {
   const teamMember = document.createElement("p");
   teamMember.classList.add("footerLink");
-  if(i === team.length - 1) {
+  if (i === team.length - 1) {
     teamMember.innerHTML = team[i].name;
   } else {
     teamMember.innerHTML = team[i].name + " |";
@@ -235,30 +238,29 @@ for (let i = 0; i < team.length; i++) {
     containerProfilImg.appendChild(teamProfileImage);
     teamDescription.innerHTML = team[i].description;
     flexContainerPopup.appendChild(teamDescription);
-  })
+  });
 }
 
 cross.addEventListener("click", () => {
   darkBackground.classList.toggle("showDarkBackground");
   newPopup.classList.toggle("showPopup");
-})
-
+});
 
 //INTERSECTION OBSERVER FOR LAZY LOADING
 
-const images = document.querySelectorAll('.pagesImages');
+const images = document.querySelectorAll(".pagesImages");
 
 let imgObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-        const image = entry.target;
-        const newSrc = image.getAttribute('data-src')
-        image.src = newSrc;
-        console.log(image);
-        imgObserver.unobserve(entry.target);
-    });
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) return;
+    const image = entry.target;
+    const newSrc = image.getAttribute("data-src");
+    image.src = newSrc;
+    console.log(image);
+    imgObserver.unobserve(entry.target);
+  });
 });
 
 images.forEach((image) => {
-    imgObserver.observe(image);
-})
+  imgObserver.observe(image);
+});
