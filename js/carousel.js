@@ -1,3 +1,23 @@
+const imagemin = require('imagemin');
+const imagemin_jpeg = require('imagemin-mozjpeg');
+const imagemin_png = require('imagemin-pngquant'); 
+  
+(async() => {
+    const files = await imagemin(['assets/imgCarousel/*.{jpg,png}'], {
+        destination: 'build/images',
+        plugins: [
+            imagemin_jpeg (),
+            imagemin_png ({
+                quality: [0.6, 0.8]
+            })
+        ]
+    });
+    
+    console.log(files);
+  })(); 
+
+
+
 // Create slides
 let slideposition = 1;
 const slides = document.querySelectorAll('.carouselItem');
