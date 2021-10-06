@@ -4,17 +4,17 @@
   --main-color: #efdeca;
   --dark-main-color: #835343;
   --white-color: #f5f3ef;
-  --second-color: #6a803e
+  --second-color: #6a803e;
 }
 
 @font-face {
   font-family: DiplomataSC;
-  src: url("../fonts/DiplomataSC.ttf");
+  src: url('../fonts/DiplomataSC.ttf');
 }
 
 @font-face {
   font-family: OpenSans;
-  src: url("../fonts/OpenSans.ttf")
+  src: url('../fonts/OpenSans.ttf');
 }
 
 *,
@@ -75,7 +75,7 @@ main {
 .navbar {
   position: sticky;
   top: 0;
-  z-index: 4
+  z-index: 4;
 }
 
 .navbarNav {
@@ -124,19 +124,20 @@ main {
 }
 
 .navbarImage {
-  filter: invert(30%) sepia(38%) saturate(595%) hue-rotate(329deg) brightness(102%) contrast(84%);
-  width: 30px
+  filter: invert(30%) sepia(38%) saturate(595%) hue-rotate(329deg)
+    brightness(102%) contrast(84%);
+  width: 30px;
 }
 
 .navbarTitleLink {
   color: var(--dark-main-color);
   text-decoration: none;
-  font-size: 14px
+  font-size: 14px;
 }
 
 .navbarUl {
   background-color: var(--dark-main-color);
-    border-radius: 0 0 30px 0;
+  border-radius: 0 0 30px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -145,7 +146,7 @@ main {
   top: 40px;
   width: 100%;
   left: -100%;
-  transition: left 0.5s ease-in-out
+  transition: left 0.5s ease-in-out;
 }
 
 .navbarUlShow {
@@ -153,15 +154,15 @@ main {
 }
 
 .navbarLi {
-  padding: 15px
+  padding: 15px;
 }
 
 .navbarLink {
   color: var(--white-color);
-  text-decoration: none
+  text-decoration: none;
 }
 
-@media screen and (min-width:1300px) {
+@media screen and (min-width: 1300px) {
   .navbarHamburger {
     display: none;
   }
@@ -177,7 +178,7 @@ main {
     font-size: 18px;
   }
   .navbarImage {
-    order: 3
+    order: 3;
   }
   .navbarLi {
     list-style: none;
@@ -185,27 +186,27 @@ main {
   }
   .navbarLink {
     color: var(--dark-main-color);
-    font-size: 14px
+    font-size: 14px;
   }
 }
 
 /*MAP*/
 
-.betweenTopAndBot{
+.betweenTopAndBot {
   min-height: 100vh;
   width: 100vw;
   overflow-x: scroll;
   overflow-y: hidden;
 }
 
-.mapWorld{
+.mapWorld {
   position: relative;
   margin-bottom: -10px;
 }
 
 @media screen and (min-width: 900px) {
-  .betweenTopAndBot{
-      overflow-x: hidden;
+  .betweenTopAndBot {
+    overflow-x: hidden;
   }
 }
 
@@ -264,11 +265,11 @@ main {
     align-items: center;
     margin-bottom: 40px;
   }
-  .bloc>* {
+  .bloc > * {
     width: 50%;
     padding: 0 50px;
   }
-  .blocReverse{
+  .blocReverse {
     flex-direction: row-reverse;
   }
   .list {
@@ -360,7 +361,7 @@ main {
 .footerTitle {
   font-family: DiplomataSC;
   font-size: 14px;
-  padding-bottom: 3px
+  padding-bottom: 3px;
 }
 
 .footerLink {
