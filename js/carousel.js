@@ -7,9 +7,9 @@ const leftButton = document.getElementById('carouselBtnNext');
 
 // Get silde position
 function updateSlidePosition() {
-  for (const slide of slides) {
+  slides.forEach((slide) => {
     slide.classList.remove('carouselItemVisible');
-  }
+  });
   slides[slideposition].classList.add('carouselItemVisible');
 }
 
