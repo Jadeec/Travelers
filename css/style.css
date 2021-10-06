@@ -9,12 +9,12 @@
 
 @font-face {
   font-family: DiplomataSC;
-  src: url("../fonts/DiplomataSC.ttf");
+  src: url('../fonts/DiplomataSC.ttf');
 }
 
 @font-face {
   font-family: OpenSans;
-  src: url("../fonts/OpenSans.ttf");
+  src: url('../fonts/OpenSans.ttf');
 }
 
 *,
