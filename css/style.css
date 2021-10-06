@@ -510,3 +510,17 @@ main {
     width: 250px;
   }
 }
+
+/*BODY BACKGROUND*/
+
+@media screen and (min-width: 1000px) {
+  .bodyBackground {
+    background: url(../assets/mapDesktop.jpg) no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  .container {
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+}
