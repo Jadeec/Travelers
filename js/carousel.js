@@ -5,20 +5,11 @@ const totalSlides = slides.length;
 const rightButton = document.getElementById('carouselBtnPrevious');
 const leftButton = document.getElementById('carouselBtnNext');
 
-// animate buttons
-document.getElementById('carouselBtnNext').addEventListener('click', () => {
-  moveToNextSlide();
-});
-
-document.getElementById('carouselBtnPrevious').addEventListener('click', () => {
-  moveToPreviousSlide();
-});
-
 // Get silde position
 function updateSlidePosition() {
-  for (const slide of slides) {
+  slides.forEach((slide) => {
     slide.classList.remove('carouselItemVisible');
-  }
+  });
   slides[slideposition].classList.add('carouselItemVisible');
 }
 
@@ -41,3 +32,12 @@ function moveToPreviousSlide() {
   leftButton.style.visibility = 'visible';
   updateSlidePosition();
 }
+
+// animate buttons
+document.getElementById('carouselBtnNext').addEventListener('click', () => {
+  moveToNextSlide();
+});
+
+document.getElementById('carouselBtnPrevious').addEventListener('click', () => {
+  moveToPreviousSlide();
+});

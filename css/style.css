@@ -392,6 +392,8 @@ main {
   font-size: 10px;
   text-decoration: none;
   color: var(--dark-main);
+  display: inline-block;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 768px) {
@@ -407,5 +409,104 @@ main {
   .footerLink {
     font-weight: bold;
     font-size: 12px;
+  }
+}
+
+/*POPUP*/
+
+.darkBackground {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: black;
+  z-index: 5;
+  opacity: 0.8;
+}
+
+.showDarkBackground {
+  display: block;
+}
+
+.newPopup {
+  position: fixed;
+  top: 150%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: auto;
+  background-color: var(--white-color);
+  z-index: 6;
+  border-radius: 30px;
+  padding: 20px;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.showPopup {
+  top: 50%;
+  opacity: 0.8;
+}
+
+.cross {
+  position: absolute;
+  right: 20px;
+  top: 13px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.teamName {
+  font-family: DiplomataSC;
+  text-align: center;
+}
+
+.teamImgGitHubLink {
+  width: 30px;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+
+.teamImgLinkedinLink {
+  width: 30px;
+  position: absolute;
+  right: 70px;
+  bottom: 20px;
+}
+
+.flexContainerPopup {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: justify;
+}
+
+.containerProfilImg {
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.teamProfileImage {
+  width: 100%;
+}
+
+.teamDescription {
+  padding-left: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .newPopup {
+    width: 50%;
+  }
+  .containerProfilImg {
+    width: 250px;
   }
 }
