@@ -228,7 +228,14 @@ main {
   max-width: 100%;
   margin-bottom: 20px;
 }
-
+.slide.slideInRight {
+  animation-name: slideRight;
+  animation-duration: 1.5s;
+}
+.slide.slideInLeft {
+  animation-name: slideLeft;
+  animation-duration: 1.5s;
+}
 .imageOpodo {
   width: 100%;
   margin-bottom: 20px;
@@ -258,7 +265,23 @@ main {
   align-items: center;
   margin-bottom: 20px;
 }
+@keyframes slideRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translate(-0%);
+  }
+}
 
+@keyframes slideLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translate(0%);
+  }
+}
 @media screen and (min-width: 700px) {
   .bloc {
     display: flex;
