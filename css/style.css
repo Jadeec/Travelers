@@ -40,7 +40,7 @@ body {
   flex-direction: column;
   font-family: OpenSans;
   color: var(--dark-main-color);
-  background-color: var(--white-color);
+  background-color: var(--main-color);
   position: relative;
 }
 
@@ -76,6 +76,7 @@ main {
   position: sticky;
   top: 0;
   z-index: 4;
+  box-shadow: 1px 1px 18px #888888;
 }
 
 .navbarNav {
@@ -248,6 +249,7 @@ main {
   align-items: center;
   max-width: 1000px;
   margin: auto;
+  background-color: var(--white-color);
 }
 
 .bloc p {
@@ -379,6 +381,7 @@ main {
   z-index: 3;
   bottom: 0;
   width: 100%;
+  box-shadow: -3px 6px 18px #888888;
 }
 
 .footerTitle {
