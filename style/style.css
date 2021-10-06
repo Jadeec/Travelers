@@ -1,247 +1,345 @@
 /*GENERAL*/
 
 :root {
-  --main-color: #efdeca;
-  --dark-main-color: #835343;
-  --white-color: #f5f3ef;
-  --second-color: #6a803e
+    --main-color: #efdeca;
+    --dark-main-color: #835343;
+    --white-color: #f5f3ef;
+    --second-color: #6a803e
 }
 
 @font-face {
-  font-family: DiplomataSC;
-  src: url("../fonts/DiplomataSC.ttf");
+    font-family: DiplomataSC;
+    src: url("../fonts/DiplomataSC.ttf");
 }
 
 @font-face {
-  font-family: OpenSans;
-  src: url("../fonts/OpenSans.ttf")
+    font-family: OpenSans;
+    src: url("../fonts/OpenSans.ttf")
 }
 
 *,
 *::after,
 *::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 html {
-  overflow-x: hidden;
+    overflow-x: hidden;
 }
 
 html,
 body {
-  height: 100%;
+    height: 100%;
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  font-family: OpenSans;
-  color: var(--dark-main-color);
-  background-color: var(--white-color);
+    display: flex;
+    flex-direction: column;
+    font-family: OpenSans;
+    color: var(--dark-main-color);
+    background-color: var(--white-color);
+    position: relative;
+    overflow-y: hidden;
 }
 
 main {
-  flex-grow: 1;
+    flex-grow: 1;
 }
 
 
-/* map */
+/*WELCOME ANIMATION*/
 
-.betweenTopAndBot{
-  height: 100vh;
-  width: 100vw;
-  margin-bottom: 0px;
-  position: absolute;
-  overflow-x: hidden;
-  overflow-y: hidden;
+.welcome {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% + 55px);
+    background-color: var(--white-color);
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: left 1s ease-in-out;
+    overflow-x: hidden;
 }
 
-#mapWorld{
-  height: 100%;
-  width: 100%;
+.welcome--load-point {
+    height: 10px;
+    width: 10px;
+    background-color: var(--dark-main-color);
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    margin: 5px;
+    top: 0;
+    transition: top .5s ease-in-out;
 }
+
+.welcome--load-point-animate-wave {
+    top: -15px
+}
+
+.welcome--animate {
+    left: -100%;
+}
+
 
 /*NAVBAR*/
 
 .navbar {
-  position: sticky;
-  top: 0;
-  z-index: 2;
-
+    position: sticky;
+    top: 0;
+    z-index: 2;
 }
 
 .navbar--nav {
-  background-color: var(--main-color);
-  height: 40px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  font-family: DiplomataSC;
-  position: relative;
+    background-color: var(--main-color);
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    font-family: DiplomataSC;
+    position: relative;
 }
 
 .navbar--hamburger {
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .navbar--hamburger-span {
-  display: block;
-  height: 2px;
-  background-color: var(--dark-main-color);
-  width: 90%;
-  transition: all 0.5s ease-in-out;
-  opacity: 1;
+    display: block;
+    height: 2px;
+    background-color: var(--dark-main-color);
+    width: 90%;
+    transition: all 0.5s ease-in-out;
+    opacity: 1;
 }
 
 .hamburger--top-span-rotate {
-  transform: rotate(45deg);
-  transform-origin: left;
+    transform: rotate(45deg);
+    transform-origin: left;
 }
 
 .hamburger--middle-span-hide {
-  opacity: 0;
+    opacity: 0;
 }
 
 .hamburger--bottom-span-rotate {
-  transform: rotate(-45deg);
-  transform-origin: left;
+    transform: rotate(-45deg);
+    transform-origin: left;
 }
 
 .navbar--image {
-  filter: invert(30%) sepia(38%) saturate(595%) hue-rotate(329deg) brightness(102%) contrast(84%);
-  width: 30px
+    filter: invert(30%) sepia(38%) saturate(595%) hue-rotate(329deg) brightness(102%) contrast(84%);
+    width: 30px
 }
 
 .navbar--title-link {
-  color: var(--dark-main-color);
-  text-decoration: none;
-  font-size: 14px
+    color: var(--dark-main-color);
+    text-decoration: none;
+    font-size: 14px
 }
 
 .navbar--ul {
-  background-color: var(--dark-main-color);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  top: 40px;
-  width: 100%;
-  left: -100%;
-  transition: left 0.5s ease-in-out
+    background-color: var(--dark-main-color);
+    border-radius: 0 0 30px 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    left: -100%;
+    transition: left 0.5s ease-in-out
 }
 
 .navbar--ul-show {
-  left: 0;
+    left: 0;
 }
 
 .navbar--li {
-  padding: 15px
+    padding-bottom: 20px;
+    list-style: none;
 }
 
 .navbar--link {
-  color: var(--white-color);
-  text-decoration: none
+    color: var(--white-color);
+    text-decoration: none;
+    transition: all 1s;
+    display: block;
+}
+
+.navbar--link:hover {
+    transform: scale(1.2);
 }
 
 @media screen and (min-width:1300px) {
-  .navbar--hamburger {
-    display: none;
-  }
-  .navbar--ul {
-    position: relative;
-    flex-direction: row;
-    background-color: transparent;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  .navbar--title {
-    font-size: 18px;
-  }
-  .navbar--image {
-    order: 3
-  }
-  .navbar--li {
-    list-style: none;
-    padding: 0 10px;
-  }
-  .navbar--link {
-    color: var(--dark-main-color);
-    font-size: 14px
-  }
+    .navbar--hamburger {
+        display: none;
+    }
+    .navbar--ul {
+        position: relative;
+        flex-direction: row;
+        background-color: transparent;
+        height: auto;
+        left: 0;
+        top: 50%;
+        height: 100%;
+        transform: translateY(-50%);
+    }
+    .navbar--title {
+        font-size: 18px;
+    }
+    .navbar--image {
+        order: 3
+    }
+    .navbar--li {
+        padding: 0 10px;
+    }
+    .navbar--link {
+        color: var(--dark-main-color);
+        font-size: 14px
+    }
 }
+
 
 /* earthLogo */
 
-.earth{
-  z-index: 5;
-  position: fixed;
-  bottom: 10%;
-  width: 85px;
-  margin-left: 5%;
-  border-radius: 50%;
+.earth {
+    z-index: 4;
+    position: fixed;
+    bottom: 10%;
+    width: 85px;
+    margin-left: 5%;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: small;
+    text-align: center;
+}
+
+#earthOnTheCorner.animation {
+    animation: spin 1s linear infinite;
+}
+
+.textRandomLocationTop {
+    letter-spacing: 5px;
+    display: flex;
+    margin-top: 5%;
+}
+
+#char1 {
+    transform: rotate( -45deg);
+    margin-top: 10%;
+}
+
+#char2 {
+    transform: rotate( -25deg);
+    margin-top: 2%;
+}
+
+#char3 {
+    transform: rotate( -5deg);
+    /* margin-top: 2%; */
+}
+
+#char5 {
+    transform: rotate( 5deg);
+    margin-top: 2%;
+}
+
+#char6 {
+    transform: rotate( 45deg);
+    margin-top: 15%;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#earthOnTheCorner {
+    width: 100%;
+    height: 100%;
 }
 
 
-#earthOnTheCorner{
-  width: 100%;
-  height: 100%;
+/*MAP*/
+
+.betweenTopAndBot {
+    height: 100vh;
+    width: 100vw;
+    margin-bottom: 0px;
+    /* position: fixed; */
+    overflow-x: scroll;
+    overflow-y: hidden;
 }
+
+#mapWorld {
+    height: 100%;
+    width: auto;
+    position: static;
+    overflow-y: hidden;
+    overflow-x: scroll;
+}
+
 
 /*FOOTER*/
 
 .footer {
-  padding: 10px;
-  background-color: var(--main-color);
-  text-align: center;
-  z-index: 3;
-  align-self: start;
-  width: 100%;
+    padding: 5px;
+    background-color: var(--main-color);
+    text-align: center;
+    z-index: 3;
+    align-self: start;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
 .footer--title {
-  font-family: DiplomataSC;
-  font-size: 14px;
-  padding-bottom: 3px
+    font-family: DiplomataSC;
+    font-size: 14px;
+    padding-bottom: 3px
 }
 
-.footer--text {
-  font-weight: bold;
-  font-size: 10px;
+.footer--link {
+    font-weight: bold;
+    font-size: 10px;
+    text-decoration: none;
+    color: var(--dark-main);
 }
 
 @media screen and (min-width: 768px) {
-  .footer {
-    padding: 15px;
-  }
-
-  .footer--title {
-    font-family: DiplomataSC;
-    font-size: 16px;
-  }
-
-  .footer--text {
-    font-weight: bold;
-    font-size: 12px;
-  }
-
+    .footer {
+        padding: 5px 0;
+    }
+    .footer--title {
+        font-family: DiplomataSC;
+        font-size: 16px;
+    }
+    .footer--link {
+        font-weight: bold;
+        font-size: 12px;
+    }
 }
 
 @media screen and (min-width: 900px) {
-  #mapWorld{
-    width: 100%;
-  }
+    #mapWorld {
+        width: 100%;
+    }
 }
-
-
