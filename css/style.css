@@ -285,7 +285,7 @@ main {
     align-items: center;
     margin-bottom: 40px;
   }
-  
+
   .bloc > * {
     width: 50%;
     padding: 0 50px;
@@ -297,34 +297,30 @@ main {
     margin-bottom: 40px;
   }
   
-  .blocOpodo {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
-    margin-top: 20px;
-    align-items: center;
-    text-align: center;
-    
-  }
+}
+
+
+.blocOpodo {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  align-items: center;
+  text-align: center;
   
-  .clickMeOpodo {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: center;
-    font-size: 11px;
-  }
-  
-  .clickMeOpodo a{
-    max-width: 20%;
-    max-height:20% ;
-    
-  }
-  .imageOpodo {
-    max-width: 50%;
-    max-height:50%;
-  }
- 
+}
+
+.clickMeOpodo {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  font-size: 11px;
+}
+
+.imageOpodo {
+  max-width: 50%;
+  max-height:50%;
 }
 
 /*CAROUSEL*/
