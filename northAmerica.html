@@ -1,20 +1,117 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Travelers | North America</title>
+    <meta
+      name="description"
+      content="Imagine you are an adventurer traveling all around the world..."
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <title>Travelers | North America</title>
-  <meta name="description" content="Imagine you are an adventurer traveling all around the world...">
-  <link rel="stylesheet" href="style/style.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
+  <body>
+    <div class="welcome">
+      <img src="assets/travelersLogo.png" alt="Welcome transition" />
+    </div>
+    <main>
+      <div class="navbar"></div>
+      <div class="container">
+        <h1 class="pagesTitle">North America</h1>
+        <div class="bloc">
+          <img
+            src="assets/white.png"
+            alt="polaroid North America"
+            data-src="assets/ameriqueNordPolaroid.png"
+            class="pagesImages slideInLeft"
+          />
+          <div class="list">
+            <ul>
+              <li>Consectetur adipiscing</li>
+              <li>Morbi imperdiet</li>
+              <li>Dolor sit amet</li>
+              <li>Blandit gravida</li>
+              <li>Adipiscing elit</li>
+              <li>Lorem pellentesque</li>
+            </ul>
+          </div>
+        </div>
+        <div class="bloc">
+          <div class="blocText">
+            <h2 class="subTitle">A bit of history</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
+              imperdiet cras orci, urna, tincidunt. Tristique sed arcu in
+              pretium et. Non tempor blandit gravida phasellus. Sed lorem
+              pellentesque mauris lacus dictum imperdiet turpis amet.
+            </p>
+          </div>
+          <img
+            src="assets/white.png"
+            alt="North America history"
+            data-src="assets/ameriqueNordHistory.png"
+            class="pagesImages slideInRight"
+          />
+        </div>
+        <div class="bloc blocReverse">
+          <div class="blocText">
+            <h2 class="subTitle">Food</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
+              imperdiet cras orci, urna, tincidunt. Tristique sed arcu in
+              pretium et. Non tempor blandit gravida phasellus. Sed lorem
+              pellentesque mauris lacus dictum imperdiet turpis amet.
+            </p>
+          </div>
+          <img
+            src="assets/white.png"
+            alt="North American food"
+            data-src="assets/ameriqueNordFood.png"
+            class="pagesImages slideInLeft"
+          />
+        </div>
 
-<body>
-  <main>
-    <div class="navbar"></div>
-  </main>
-  <footer class="footer"></footer>
-  <script src="js/index.js" charset="utf-8"></script>
-</body>
+        <h2 class="subTitle">Discover North America</h2>
 
+        <!-- CAROUSEL -->
+        <div class="carousel">
+          <div class="carouselItem">
+            <img src="assets/imgCarousel/usa1.jpg" />
+          </div>
+          <div class="carouselItem carouselItemVisible">
+            <img src="assets/imgCarousel/usa2.jpg" />
+          </div>
+          <div class="carouselItem">
+            <img src="assets/imgCarousel/usa3.jpg" />
+          </div>
+          <div class="carouselActions">
+            <button id="carouselBtnPrevious" aria-label="Previous slide">
+              <
+            </button>
+            <button id="carouselBtnNext" aria-label="Next slide">></button>
+          </div>
+        </div>
+
+        <div class="blocOpodo">
+          <h2 class="subTitle">Book your next trip</h2>
+          <a href="#"
+            ><img
+              src="assets/white.png"
+              alt="opodo logo"
+              data-src="assets/opodoLogo.png"
+              class="pagesImages imageOpodo"
+          /></a>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer"></footer>
+
+    <script src="js/index.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/carousel.js"></script>
+    <script src="js/animation.js"></script>
+  </body>
 </html>
