@@ -269,7 +269,8 @@ main {
 }
 @keyframes slideRight {
   from {
-    transform: translateX(100%);
+    transform: translateX(12%);
+    opacity: 0.33;
   }
   to {
     transform: translate(-0%);
@@ -278,7 +279,8 @@ main {
 
 @keyframes slideLeft {
   from {
-    transform: translateX(-100%);
+    transform: translateX(-12%);
+    opacity: 0.33;
   }
   to {
     transform: translate(0%);
