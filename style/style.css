@@ -1,6 +1,6 @@
 /*GENERAL*/
 
-:root {
+ :root {
     --main-color: #efdeca;
     --dark-main-color: #835343;
     --white-color: #f5f3ef;
@@ -217,6 +217,54 @@ main {
 }
 
 
+/* Icone de geolocalisation */
+
+#mapWrapper {
+    position: relative;
+    width: max-content;
+}
+
+.allIconMap:hover {
+    transform: scale(1.2);
+}
+
+.allIconMap {
+    z-index: 4;
+    position: absolute;
+    transition: all 1s;
+}
+
+#iconNorthAmerica {
+    top: 30%;
+    left: 15%;
+}
+
+#iconSouthAmerica {
+    top: 65%;
+    left: 28%;
+}
+
+#iconEurope {
+    top: 30%;
+    left: 50%;
+}
+
+#iconAsia {
+    top: 30%;
+    left: 70%;
+}
+
+#iconAfrica {
+    top: 50%;
+    left: 50%;
+}
+
+#iconOceania {
+    top: 65%;
+    left: 82%;
+}
+
+
 /* earthLogo */
 
 .earth {
@@ -239,31 +287,42 @@ main {
     letter-spacing: 5px;
     display: flex;
     margin-top: 5%;
+    float: left;
+    shape-outside: polygon(85px 35px, 37px 18px, -2px 33px, -12px 25px, 39px 0px, 90px 15px);
 }
 
 #char1 {
     transform: rotate( -45deg);
     margin-top: 10%;
+    color: #552d1f;
 }
 
 #char2 {
     transform: rotate( -25deg);
     margin-top: 2%;
+    color: #552d1f;
 }
 
 #char3 {
     transform: rotate( -5deg);
     /* margin-top: 2%; */
+    color: #552d1f;
+}
+
+#char4 {
+    color: #552d1f;
 }
 
 #char5 {
     transform: rotate( 5deg);
     margin-top: 2%;
+    color: #552d1f;
 }
 
 #char6 {
     transform: rotate( 45deg);
     margin-top: 15%;
+    color: #552d1f;
 }
 
 @keyframes spin {
@@ -275,6 +334,13 @@ main {
 #earthOnTheCorner {
     width: 100%;
     height: 100%;
+    shape-outside: circle(50%);
+    float: left;
+    transition: all 1s;
+}
+
+#earthOnTheCorner:hover {
+    transform: scale(1.2);
 }
 
 
@@ -292,9 +358,6 @@ main {
 #mapWorld {
     height: 100%;
     width: auto;
-    position: static;
-    overflow-y: hidden;
-    overflow-x: scroll;
 }
 
 
