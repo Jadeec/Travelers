@@ -542,11 +542,8 @@ main {
 
 #mapWrapper {
   position: relative;
+  width: max-content;
   overflow-x: scroll;
-  background: url(../assets/mapDesktop.jpg) no-repeat center;
-  background-size: cover;
-  width: 300vw;
-  min-height: 100vh;
 }
 
 .allIconMap:hover {
