@@ -1,3 +1,23 @@
+// earth on the corner
+
+const continentPages = [
+  'africa.html',
+  'europe.html',
+  'asia.html',
+  'northAmerica.html',
+  'oceania.html',
+  'southAmerica.html',
+];
+
+function goToRandomPage() {
+  document.querySelector('#earthOnTheCorner').classList.add('animation');
+  const page =
+    continentPages[Math.floor(Math.random() * continentPages.length)];
+  setTimeout(() => {
+    window.location.href = page;
+  }, 2000);
+}
+
 // INTERSECTION OBSERVER FOR LAZY LOADING
 
 const images = document.querySelectorAll('.pagesImages');

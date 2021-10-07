@@ -1,0 +1,640 @@
+/*GENERAL*/
+
+:root {
+    --main-color: #efdeca;
+    --dark-main-color: #835343;
+    --white-color: #f5f3ef;
+    --second-color: #6a803e;
+}
+
+@font-face {
+    font-family: DiplomataSC;
+    src: url('../fonts/DiplomataSC.ttf');
+}
+
+@font-face {
+    font-family: OpenSans;
+    src: url('../fonts/OpenSans.ttf');
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden;
+    position: relative;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: OpenSans;
+    color: var(--dark-main-color);
+    background-color: var(--white-color);
+    position: relative;
+}
+
+main {
+    flex-grow: 1;
+}
+
+
+/*WELCOME ANIMATION*/
+
+.welcome {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--white-color);
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: left 1s ease-in-out;
+    overflow-x: hidden;
+}
+
+.welcomeAnimate {
+    left: -100%;
+}
+
+
+/*NAVBAR*/
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 4;
+}
+
+.navbarNav {
+    background-color: var(--main-color);
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    font-family: DiplomataSC;
+    position: relative;
+}
+
+.navbarHamburger {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.navbarHamburgerSpan {
+    display: block;
+    height: 2px;
+    background-color: var(--dark-main-color);
+    width: 90%;
+    transition: all 0.5s ease-in-out;
+    opacity: 1;
+}
+
+.hamburgerTopSpanRotate {
+    transform: rotate(45deg);
+    transform-origin: left;
+}
+
+.hamburgerMiddleSpanHide {
+    opacity: 0;
+}
+
+.hamburgerBottomSpanRotate {
+    transform: rotate(-45deg);
+    transform-origin: left;
+}
+
+.navbarImage {
+    filter: invert(30%) sepia(38%) saturate(595%) hue-rotate(329deg) brightness(102%) contrast(84%);
+    width: 30px;
+}
+
+.navbarTitleLink {
+    color: var(--dark-main-color);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.navbarUl {
+    background-color: var(--dark-main-color);
+    border-radius: 0 0 30px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 40px;
+    width: 100%;
+    left: -100%;
+    transition: left 0.5s ease-in-out;
+}
+
+.navbarUlShow {
+    left: 0;
+}
+
+.navbarLi {
+    padding: 15px;
+}
+
+.navbarLink {
+    color: var(--white-color);
+    text-decoration: none;
+}
+
+@media screen and (min-width: 1300px) {
+    .navbarHamburger {
+        display: none;
+    }
+    .navbarUl {
+        position: relative;
+        flex-direction: row;
+        background-color: transparent;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .navbarTitle {
+        font-size: 18px;
+    }
+    .navbarImage {
+        order: 3;
+    }
+    .navbarLi {
+        list-style: none;
+        padding: 0 10px;
+    }
+    .navbarLink {
+        color: var(--dark-main-color);
+        font-size: 14px;
+    }
+}
+
+
+/*PAGES*/
+
+.pagesTitle {
+    font-size: 35px;
+    font-family: DiplomataSC;
+    margin: 20px auto 40px auto;
+}
+
+.subTitle {
+    font-size: 20px;
+    font-family: DiplomataSC;
+}
+
+.pagesImages {
+    max-height: 500px;
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+
+.slide.slideInRight {
+    animation-name: slideRight;
+    animation-duration: 1.5s;
+}
+
+.slide.slideInLeft {
+    animation-name: slideLeft;
+    animation-duration: 1.5s;
+}
+
+.imageOpodo {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.container {
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.bloc p {
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.subTitle {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.list {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+@keyframes slideRight {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translate(-0%);
+    }
+}
+
+@keyframes slideLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translate(0%);
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .bloc {
+        display: flex;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+    .bloc>* {
+        width: 50%;
+        padding: 0 50px;
+    }
+    .blocReverse {
+        flex-direction: row-reverse;
+    }
+    .list {
+        margin-bottom: 40px;
+    }
+    .blocOpodo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    .imageOpodo {
+        width: 50%;
+    }
+}
+
+
+/*CAROUSEL*/
+
+.carousel {
+    overflow: hidden;
+    max-width: 600px;
+    position: relative;
+}
+
+.carousel .carouselItem,
+.carousel .carouselItem--hidden {
+    display: none;
+}
+
+.carousel .carouselItem img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+}
+
+.carousel .carouselItemVisible {
+    display: block;
+    animation: fadeVisibility 0.5s;
+}
+
+.carousel .carouselActions {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel .carouselActions button {
+    border-radius: 50px;
+    border: 0;
+    font-weight: bold;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+}
+
+.carousel .carouselActions button#carouselBtnPrevious {
+    margin-left: 20px;
+}
+
+.carousel .carouselActions button#carouselBtnNext {
+    margin-right: 20px;
+}
+
+@keyframes fadeVisibility {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: opacity linear;
+    }
+}
+
+
+/*FOOTER*/
+
+.footer {
+    padding: 5px;
+    background-color: var(--main-color);
+    text-align: center;
+    z-index: 3;
+    bottom: 0;
+    width: 100%;
+}
+
+.footerTitle {
+    font-family: DiplomataSC;
+    font-size: 14px;
+    padding-bottom: 3px;
+}
+
+.footerLink {
+    font-weight: bold;
+    font-size: 10px;
+    text-decoration: none;
+    color: var(--dark-main);
+    display: inline-block;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+    .footer {
+        padding: 5px 0;
+    }
+    .footerTitle {
+        font-family: DiplomataSC;
+        font-size: 16px;
+    }
+    .footerLink {
+        font-weight: bold;
+        font-size: 12px;
+    }
+}
+
+
+/*POPUP*/
+
+.darkBackground {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    z-index: 5;
+    opacity: 0.8;
+}
+
+.showDarkBackground {
+    display: block;
+}
+
+.newPopup {
+    position: fixed;
+    top: 150%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: auto;
+    background-color: var(--white-color);
+    z-index: 6;
+    border-radius: 30px;
+    padding: 20px;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.showPopup {
+    top: 50%;
+    opacity: 0.8;
+}
+
+.cross {
+    position: absolute;
+    right: 20px;
+    top: 13px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.teamName {
+    font-family: DiplomataSC;
+    text-align: center;
+}
+
+.teamImgGitHubLink {
+    width: 30px;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
+
+.teamImgLinkedinLink {
+    width: 30px;
+    position: absolute;
+    right: 70px;
+    bottom: 20px;
+}
+
+.flexContainerPopup {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: justify;
+}
+
+.containerProfilImg {
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.teamProfileImage {
+    width: 100%;
+}
+
+.teamDescription {
+    padding-left: 10px;
+}
+
+@media screen and (min-width: 768px) {
+    .newPopup {
+        width: 50%;
+    }
+    .containerProfilImg {
+        width: 250px;
+    }
+}
+
+
+/* Icone de geolocalisation */
+
+#mapWrapper {
+    position: relative;
+    width: max-content;
+    overflow-x: scroll;
+}
+
+.allIconMap:hover {
+    transform: scale(1.2);
+}
+
+.allIconMap {
+    z-index: 4;
+    position: absolute;
+    transition: all 1s;
+}
+
+#iconNorthAmerica {
+    top: 30%;
+    left: 15%;
+}
+
+#iconSouthAmerica {
+    top: 65%;
+    left: 28%;
+}
+
+#iconEurope {
+    top: 30%;
+    left: 50%;
+}
+
+#iconAsia {
+    top: 30%;
+    left: 70%;
+}
+
+#iconAfrica {
+    top: 50%;
+    left: 50%;
+}
+
+#iconOceania {
+    top: 65%;
+    left: 82%;
+}
+
+
+/* earthLogo */
+
+.earth {
+    z-index: 4;
+    position: fixed;
+    bottom: 10%;
+    width: 85px;
+    margin-left: 5%;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: small;
+    text-align: center;
+}
+
+#earthOnTheCorner.animation {
+    animation: spin 1s linear infinite;
+}
+
+.textRandomLocationTop {
+    letter-spacing: 5px;
+    display: flex;
+    margin-top: 5%;
+    float: left;
+    shape-outside: polygon(85px 35px, 37px 18px, -2px 33px, -12px 25px, 39px 0px, 90px 15px);
+}
+
+#char1 {
+    transform: rotate( -45deg);
+    margin-top: 10%;
+    color: #552d1f;
+}
+
+#char2 {
+    transform: rotate( -25deg);
+    margin-top: 2%;
+    color: #552d1f;
+}
+
+#char3 {
+    transform: rotate( -5deg);
+    /* margin-top: 2%; */
+    color: #552d1f;
+}
+
+#char4 {
+    color: #552d1f;
+}
+
+#char5 {
+    transform: rotate( 5deg);
+    margin-top: 2%;
+    color: #552d1f;
+}
+
+#char6 {
+    transform: rotate( 45deg);
+    margin-top: 15%;
+    color: #552d1f;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#earthOnTheCorner {
+    width: 100%;
+    height: 100%;
+    shape-outside: circle(50%);
+    float: left;
+    transition: all 1s;
+}
+
+#earthOnTheCorner:hover {
+    transform: scale(1.2);
+}
+
+
+/*MAP*/
+
+.betweenTopAndBot {
+    height: 100vh;
+    width: auto;
+    margin-bottom: 0px;
+    position: relative;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
