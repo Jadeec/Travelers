@@ -1,20 +1,20 @@
 /*GENERAL*/
 
- :root {
+:root {
     --main-color: #efdeca;
     --dark-main-color: #835343;
     --white-color: #f5f3ef;
-    --second-color: #6a803e
+    --second-color: #6a803e;
 }
 
 @font-face {
     font-family: DiplomataSC;
-    src: url("../fonts/DiplomataSC.ttf");
+    src: url('../fonts/DiplomataSC.ttf');
 }
 
 @font-face {
     font-family: OpenSans;
-    src: url("../fonts/OpenSans.ttf")
+    src: url('../fonts/OpenSans.ttf');
 }
 
 *,
@@ -27,6 +27,7 @@
 
 html {
     overflow-x: hidden;
+    position: relative;
 }
 
 html,
@@ -41,7 +42,6 @@ body {
     color: var(--dark-main-color);
     background-color: var(--white-color);
     position: relative;
-    overflow-y: hidden;
 }
 
 main {
@@ -52,11 +52,11 @@ main {
 /*WELCOME ANIMATION*/
 
 .welcome {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: calc(100% + 55px);
+    height: 100%;
     background-color: var(--white-color);
     z-index: 5;
     display: flex;
@@ -67,23 +67,7 @@ main {
     overflow-x: hidden;
 }
 
-.welcome--load-point {
-    height: 10px;
-    width: 10px;
-    background-color: var(--dark-main-color);
-    border-radius: 50%;
-    display: inline-block;
-    position: relative;
-    margin: 5px;
-    top: 0;
-    transition: top .5s ease-in-out;
-}
-
-.welcome--load-point-animate-wave {
-    top: -15px
-}
-
-.welcome--animate {
+.welcomeAnimate {
     left: -100%;
 }
 
@@ -93,12 +77,12 @@ main {
 .navbar {
     position: sticky;
     top: 0;
-    z-index: 2;
+    z-index: 4;
 }
 
-.navbar--nav {
+.navbarNav {
     background-color: var(--main-color);
-    height: 50px;
+    height: 40px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -108,7 +92,7 @@ main {
     position: relative;
 }
 
-.navbar--hamburger {
+.navbarHamburger {
     width: 30px;
     height: 30px;
     cursor: pointer;
@@ -118,7 +102,7 @@ main {
     justify-content: space-around;
 }
 
-.navbar--hamburger-span {
+.navbarHamburgerSpan {
     display: block;
     height: 2px;
     background-color: var(--dark-main-color);
@@ -127,92 +111,391 @@ main {
     opacity: 1;
 }
 
-.hamburger--top-span-rotate {
+.hamburgerTopSpanRotate {
     transform: rotate(45deg);
     transform-origin: left;
 }
 
-.hamburger--middle-span-hide {
+.hamburgerMiddleSpanHide {
     opacity: 0;
 }
 
-.hamburger--bottom-span-rotate {
+.hamburgerBottomSpanRotate {
     transform: rotate(-45deg);
     transform-origin: left;
 }
 
-.navbar--image {
+.navbarImage {
     filter: invert(30%) sepia(38%) saturate(595%) hue-rotate(329deg) brightness(102%) contrast(84%);
-    width: 30px
+    width: 30px;
 }
 
-.navbar--title-link {
+.navbarTitleLink {
     color: var(--dark-main-color);
     text-decoration: none;
-    font-size: 14px
+    font-size: 14px;
 }
 
-.navbar--ul {
+.navbarUl {
     background-color: var(--dark-main-color);
     border-radius: 0 0 30px 0;
-    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     position: absolute;
-    top: 50px;
+    top: 40px;
     width: 100%;
     left: -100%;
-    transition: left 0.5s ease-in-out
+    transition: left 0.5s ease-in-out;
 }
 
-.navbar--ul-show {
+.navbarUlShow {
     left: 0;
 }
 
-.navbar--li {
-    padding-bottom: 20px;
-    list-style: none;
+.navbarLi {
+    padding: 15px;
 }
 
-.navbar--link {
+.navbarLink {
     color: var(--white-color);
     text-decoration: none;
-    transition: all 1s;
-    display: block;
 }
 
-.navbar--link:hover {
-    transform: scale(1.2);
-}
-
-@media screen and (min-width:1300px) {
-    .navbar--hamburger {
+@media screen and (min-width: 1300px) {
+    .navbarHamburger {
         display: none;
     }
-    .navbar--ul {
+    .navbarUl {
         position: relative;
         flex-direction: row;
         background-color: transparent;
-        height: auto;
         left: 0;
         top: 50%;
-        height: 100%;
         transform: translateY(-50%);
     }
-    .navbar--title {
+    .navbarTitle {
         font-size: 18px;
     }
-    .navbar--image {
-        order: 3
+    .navbarImage {
+        order: 3;
     }
-    .navbar--li {
+    .navbarLi {
+        list-style: none;
         padding: 0 10px;
     }
-    .navbar--link {
+    .navbarLink {
         color: var(--dark-main-color);
-        font-size: 14px
+        font-size: 14px;
+    }
+}
+
+
+/*PAGES*/
+
+.pagesTitle {
+    font-size: 35px;
+    font-family: DiplomataSC;
+    margin: 20px auto 40px auto;
+}
+
+.subTitle {
+    font-size: 20px;
+    font-family: DiplomataSC;
+}
+
+.pagesImages {
+    max-height: 500px;
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+
+.slide.slideInRight {
+    animation-name: slideRight;
+    animation-duration: 1.5s;
+}
+
+.slide.slideInLeft {
+    animation-name: slideLeft;
+    animation-duration: 1.5s;
+}
+
+.imageOpodo {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.container {
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.bloc p {
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.subTitle {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.list {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+@keyframes slideRight {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translate(-0%);
+    }
+}
+
+@keyframes slideLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translate(0%);
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .bloc {
+        display: flex;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+    .bloc>* {
+        width: 50%;
+        padding: 0 50px;
+    }
+    .blocReverse {
+        flex-direction: row-reverse;
+    }
+    .list {
+        margin-bottom: 40px;
+    }
+    .blocOpodo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    .imageOpodo {
+        width: 50%;
+    }
+}
+
+
+/*CAROUSEL*/
+
+.carousel {
+    overflow: hidden;
+    max-width: 600px;
+    position: relative;
+}
+
+.carousel .carouselItem,
+.carousel .carouselItem--hidden {
+    display: none;
+}
+
+.carousel .carouselItem img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+}
+
+.carousel .carouselItemVisible {
+    display: block;
+    animation: fadeVisibility 0.5s;
+}
+
+.carousel .carouselActions {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel .carouselActions button {
+    border-radius: 50px;
+    border: 0;
+    font-weight: bold;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+}
+
+.carousel .carouselActions button#carouselBtnPrevious {
+    margin-left: 20px;
+}
+
+.carousel .carouselActions button#carouselBtnNext {
+    margin-right: 20px;
+}
+
+@keyframes fadeVisibility {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: opacity linear;
+    }
+}
+
+
+/*FOOTER*/
+
+.footer {
+    padding: 5px;
+    background-color: var(--main-color);
+    text-align: center;
+    z-index: 3;
+    bottom: 0;
+    width: 100%;
+}
+
+.footerTitle {
+    font-family: DiplomataSC;
+    font-size: 14px;
+    padding-bottom: 3px;
+}
+
+.footerLink {
+    font-weight: bold;
+    font-size: 10px;
+    text-decoration: none;
+    color: var(--dark-main);
+    display: inline-block;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+    .footer {
+        padding: 5px 0;
+    }
+    .footerTitle {
+        font-family: DiplomataSC;
+        font-size: 16px;
+    }
+    .footerLink {
+        font-weight: bold;
+        font-size: 12px;
+    }
+}
+
+
+/*POPUP*/
+
+.darkBackground {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    z-index: 5;
+    opacity: 0.8;
+}
+
+.showDarkBackground {
+    display: block;
+}
+
+.newPopup {
+    position: fixed;
+    top: 150%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: auto;
+    background-color: var(--white-color);
+    z-index: 6;
+    border-radius: 30px;
+    padding: 20px;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.showPopup {
+    top: 50%;
+    opacity: 0.8;
+}
+
+.cross {
+    position: absolute;
+    right: 20px;
+    top: 13px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.teamName {
+    font-family: DiplomataSC;
+    text-align: center;
+}
+
+.teamImgGitHubLink {
+    width: 30px;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
+
+.teamImgLinkedinLink {
+    width: 30px;
+    position: absolute;
+    right: 70px;
+    bottom: 20px;
+}
+
+.flexContainerPopup {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: justify;
+}
+
+.containerProfilImg {
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.teamProfileImage {
+    width: 100%;
+}
+
+.teamDescription {
+    padding-left: 10px;
+}
+
+@media screen and (min-width: 768px) {
+    .newPopup {
+        width: 50%;
+    }
+    .containerProfilImg {
+        width: 250px;
     }
 }
 
@@ -222,6 +505,7 @@ main {
 #mapWrapper {
     position: relative;
     width: max-content;
+    overflow-x: scroll;
 }
 
 .allIconMap:hover {
@@ -348,61 +632,9 @@ main {
 
 .betweenTopAndBot {
     height: 100vh;
-    width: 100vw;
+    width: auto;
     margin-bottom: 0px;
-    /* position: fixed; */
+    position: relative;
     overflow-x: scroll;
     overflow-y: hidden;
-}
-
-#mapWorld {
-    height: 100%;
-    width: auto;
-}
-
-
-/*FOOTER*/
-
-.footer {
-    padding: 5px;
-    background-color: var(--main-color);
-    text-align: center;
-    z-index: 3;
-    align-self: start;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
-.footer--title {
-    font-family: DiplomataSC;
-    font-size: 14px;
-    padding-bottom: 3px
-}
-
-.footer--link {
-    font-weight: bold;
-    font-size: 10px;
-    text-decoration: none;
-    color: var(--dark-main);
-}
-
-@media screen and (min-width: 768px) {
-    .footer {
-        padding: 5px 0;
-    }
-    .footer--title {
-        font-family: DiplomataSC;
-        font-size: 16px;
-    }
-    .footer--link {
-        font-weight: bold;
-        font-size: 12px;
-    }
-}
-
-@media screen and (min-width: 900px) {
-    #mapWorld {
-        width: 100%;
-    }
 }
