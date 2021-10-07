@@ -237,8 +237,6 @@ main {
   animation-name: slideLeft;
   animation-duration: 1.5s;
 }
-
-
 .container {
   padding: 1em;
   display: flex;
@@ -300,9 +298,12 @@ main {
   .list {
     margin-bottom: 40px;
   }
-  
 }
-
+@media screen and (min-width: 500px) {
+  .pagesImages {
+    align-items: center;
+  }
+}
 
 .blocOpodo {
   display: flex;
@@ -311,7 +312,6 @@ main {
   margin-top: 20px;
   align-items: center;
   text-align: center;
-  
 }
 
 .clickMeOpodo {
@@ -324,7 +324,7 @@ main {
 
 .imageOpodo {
   max-width: 50%;
-  max-height:50%;
+  max-height: 50%;
 }
 
 /*CAROUSEL*/
@@ -387,39 +387,36 @@ main {
   }
 }
 
-@media screen and  (min-width: 320px) and (max-width:600px) {
+@media screen and (min-width: 320px) and (max-width: 600px) {
   .carousel {
     display: flex;
     align-items: center;
   }
-  
+
   .carousel .carouselItem img {
     max-height: 400px;
-
   }
 }
 
-@media screen and  (min-width: 600px) and (max-width:1200px) {
+@media screen and (min-width: 600px) and (max-width: 1200px) {
   .carousel {
     display: flex;
     align-items: center;
   }
-  
+
   .carousel .carouselItem img {
     max-height: 500px;
-    
   }
 }
 
-@media screen and  (min-width: 1201px)  {
+@media screen and (min-width: 1201px) {
   .carousel {
     display: flex;
     align-items: center;
   }
-  
+
   .carousel .carouselItem img {
     max-height: 600px;
-    
   }
 }
 
