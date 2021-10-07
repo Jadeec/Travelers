@@ -207,6 +207,8 @@ main {
 .pagesImages {
   max-height: 500px;
   max-width: 100%;
+  display: block;
+  margin: 0 auto;
   margin-bottom: 20px;
 }
 .slide.slideInRight {
@@ -277,11 +279,6 @@ main {
   }
   .list {
     margin-bottom: 40px;
-  }
-}
-@media screen and (min-width: 500px) {
-  .pagesImages {
-    align-items: center;
   }
 }
 
