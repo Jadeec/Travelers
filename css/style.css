@@ -270,13 +270,11 @@ main {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  justify-content: center;
   font-size: 11px;
 }
 
 .clickMeOpodo a{
-  max-width: 20%;
-  max-height:20% ;
+  justify-content: left;
   
 }
 .imageOpodo {
