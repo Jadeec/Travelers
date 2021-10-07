@@ -1,35 +1,37 @@
+/* eslint-disable no-plusplus */
 // Create slides
-let slideposition = 1;
+let slidePosition = 1;
 const slides = document.querySelectorAll('.carouselItem');
 const totalSlides = slides.length;
-const rightButton = document.getElementById('carouselBtnPrevious');
-const leftButton = document.getElementById('carouselBtnNext');
 
 // Get silde position
 function updateSlidePosition() {
   slides.forEach((slide) => {
     slide.classList.remove('carouselItemVisible');
   });
-  slides[slideposition].classList.add('carouselItemVisible');
+  slides[slidePosition].classList.add('carouselItemVisible');
 }
 
 // move slides
 function moveToNextSlide() {
-  slideposition += 1;
-  if (slideposition === totalSlides - 1) {
-    leftButton.style.visibility = 'hidden';
+  if (slidePosition === totalSlides - 1) {
+    slidePosition = 0;
+  } else {
+    // eslint-disable-next-line no-plusplus
+    slidePosition++;
   }
-  rightButton.style.visibility = 'visible';
+
   updateSlidePosition();
 }
 
 function moveToPreviousSlide() {
-  slideposition -= 1;
-  if (slideposition === 0) {
-    rightButton.style.visibility = 'hidden';
+  if (slidePosition === 0) {
+    slidePosition = totalSlides - 1;
+  } else {
+    // eslint-disable-next-line no-plusplus
+    slidePosition--;
   }
 
-  leftButton.style.visibility = 'visible';
   updateSlidePosition();
 }
 
