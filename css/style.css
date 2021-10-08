@@ -206,6 +206,8 @@ main {
 .pagesImages {
   max-height: 500px;
   max-width: 100%;
+  display: block;
+  margin: 0 auto;
   margin-bottom: 20px;
 }
 .slide.slideInRight {
@@ -216,7 +218,6 @@ main {
   animation-name: slideLeft;
   animation-duration: 1.5s;
 }
-
 .container {
   padding: 1em;
   display: flex;
