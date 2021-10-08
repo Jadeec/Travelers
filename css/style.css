@@ -243,6 +243,7 @@ main {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
+  justify-content: center;
 }
 @keyframes slideRight {
   from {
@@ -464,7 +465,7 @@ main {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 90%;
-  height: auto;
+  min-height: 50%;
   background-color: var(--white-color);
   z-index: 6;
   border-radius: 30px;
@@ -489,6 +490,7 @@ main {
 .teamName {
   font-family: DiplomataSC;
   text-align: center;
+  font-size: 18px;
 }
 
 .teamImgGitHubLink {
