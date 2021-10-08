@@ -498,6 +498,13 @@ main {
   bottom: 20px;
 }
 
+.teamImgWildLink {
+  width: 60px;
+  position: absolute;
+  right: 115px;
+  bottom: 20px;
+}
+
 .teamImgLinkedinLink {
   width: 30px;
   position: absolute;
@@ -591,7 +598,7 @@ main {
 
 .earth {
   z-index: 4;
-  position:absolute;
+  position: absolute;
   bottom: 10%;
   width: 85px;
   margin-left: 5%;
