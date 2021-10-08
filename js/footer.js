@@ -45,7 +45,7 @@ const team = [
     linkedin: 'https://www.linkedin.com/in/jade-clairicia1/',
     picture: './assets/jade.jpeg',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi imperdiet cras orci, urna, tincidunt.',
+      'Développeuse junior Angular, Java, Javascript. Formée à la Wild Code School de Lyon en 2021-2022.',
   },
   {
     name: 'Karim Boudjemai',
@@ -53,7 +53,7 @@ const team = [
     linkedin: 'https://www.linkedin.com/in/karim-boudjemai-87490b221/',
     picture: './assets/karim.jpeg',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi imperdiet cras orci, urna, tincidunt.',
+      'Développeur junior Angular, Java, Javascript. Formé à la Wild Code School de Lyon en 2021-2022.',
   },
   {
     name: 'Camille Frelat',
@@ -61,7 +61,7 @@ const team = [
     linkedin: 'https://www.linkedin.com/in/camille-frelat-27974189/',
     picture: './assets/camille.JPG',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi imperdiet cras orci, urna, tincidunt.',
+      'Développeuse junior Angular, Java, Javascript. Formée à la Wild Code School de Lyon en 2021-2022.',
   },
   {
     name: 'Anthony Charretier',
@@ -69,7 +69,7 @@ const team = [
     linkedin: 'https://www.linkedin.com/in/anthony-charretier-95101878/',
     picture: './assets/anthony.jpeg',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi imperdiet cras orci, urna, tincidunt.',
+      'Développeur junior Angular, Java, Javascript. Formé à la Wild Code School de Lyon en 2021-2022.',
   },
 ];
 
