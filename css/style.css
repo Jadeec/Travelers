@@ -417,7 +417,7 @@ main {
 
 .footerLink {
   font-weight: bold;
-  font-size: 10px;
+  font-size: 12px;
   text-decoration: none;
   color: var(--dark-main);
   display: inline-block;
